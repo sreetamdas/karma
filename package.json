@@ -1,0 +1,26 @@
+{
+    "name": "karma",
+    "displayName": "Karma",
+    "publisher": "sreetamdas",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sreetamdas/karma"
+    },
+    "description": "A visually pleasing dark theme, for VS Code. WIP.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.38.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Karma",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Karma-color-theme.json"
+            }
+        ]
+    }
+}
