@@ -1,8 +1,8 @@
 {
 	"name": "karma",
 	"displayName": "Karma",
-	"description": "",
-	"version": "1.0.0",
+	"description": "A mix of Ayu, Andromeda and Lucy for React+Typescript",
+	"version": "1.0.1",
 	"publisher": "sreetamd",
 	"repository": {
 		"url": "https://github.com/sreetamdas/karma"
