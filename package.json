@@ -1,0 +1,25 @@
+{
+	"name": "karma",
+	"displayName": "Karma",
+	"description": "",
+	"version": "0.0.1",
+	"publisher": "sreetamd",
+	"repository": {
+		"url": "https://github.com/sreetamdas/karma"
+	},
+	"engines": {
+		"vscode": "^1.41.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Karma",
+				"uiTheme": "vs-dark",
+				"path": "./themes/Karma-color-theme.json"
+			}
+		]
+	}
+}
