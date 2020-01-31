@@ -1,26 +1,25 @@
 {
-    "name": "karma",
-    "displayName": "Karma",
-    "publisher": "sreetamdas",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/sreetamdas/karma"
-    },
-    "description": "A visually pleasing dark theme, for VS Code. WIP.",
-    "version": "0.0.1",
-    "engines": {
-        "vscode": "^1.38.0"
-    },
-    "categories": [
-        "Themes"
-    ],
-    "contributes": {
-        "themes": [
-            {
-                "label": "Karma",
-                "uiTheme": "vs-dark",
-                "path": "./themes/Karma-color-theme.json"
-            }
-        ]
-    }
+	"name": "karma",
+	"displayName": "Karma",
+	"description": "",
+	"version": "0.0.1",
+	"publisher": "sreetamd",
+	"repository": {
+		"url": "https://github.com/sreetamdas/karma"
+	},
+	"engines": {
+		"vscode": "^1.41.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Karma",
+				"uiTheme": "vs-dark",
+				"path": "./themes/Karma-color-theme.json"
+			}
+		]
+	}
 }

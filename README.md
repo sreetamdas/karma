@@ -1,4 +1,3 @@
-# README
-## Karma
+# Karma
 
-A visually pleasing theme for VS Code. WIP.
+A port of Material Design, designed for working with React-TypeScript.
