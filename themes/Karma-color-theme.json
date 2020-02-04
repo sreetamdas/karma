@@ -1326,10 +1326,11 @@
 			}
 		},
 		{
+			// check for json dict key
 			"scope": ["support.type", "entity.name.type.object.console"],
 			"name": "Library type",
 			"settings": {
-				"fontStyle": "italic",
+				// "fontStyle": "italic",
 				"foreground": "#5ad4e6"
 			}
 		},
@@ -1368,11 +1369,18 @@
 				"foreground": "#f7f1ff"
 			}
 		},
+		// {
+		// 	"scope": ["variable"],
+		// 	"name": "Variable",
+		// 	"settings": {
+		// 		"foreground": "#f7f1ff"
+		// 	}
+		// },
 		{
-			"scope": ["variable", "variable.other"],
+			"scope": ["variable.other.object.ts"],
 			"name": "Variable",
 			"settings": {
-				"foreground": "#f7f1ff"
+				"foreground": "#5ad4e6"
 			}
 		},
 		{
@@ -1392,6 +1400,7 @@
 		},
 		{
 			"scope": [
+				"entity.name.type.ts",
 				"entity.name.type.alias.ts",
 				"meta.type.parameters.tsx",
 				"meta.type.annotation.tsx"
