@@ -21,5 +21,9 @@
 				"path": "./themes/Karma-color-theme.json"
 			}
 		]
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"vsce": "^1.75.0"
 	}
 }
