@@ -1,20 +1,17 @@
 name: Publish VSCE Package
 
 on:
-    push:
-        branches:
-            - master
+  push:
+    branches:
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
-      steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: "12.x"
-        - run: yarn --frozen-lockfile
-          # yarn build to build the project
-        - run: "vsce publish -p $VSCE_TOKEN"
-          env:
-            VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
+    steps:
+    - uses: actions/checkout@v2
+    - uses: lannonbr/vsce-action@master
+      with:
+        args: "publish -p $VSCE_TOKEN"
+      env:
+        VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
