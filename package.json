@@ -2,7 +2,7 @@
 	"name": "karma",
 	"displayName": "Karma",
 	"description": "A mix of Ayu, Andromeda and Lucy for React+Typescript",
-	"version": "2.2.0",
+	"version": "2.2.1",
 	"publisher": "sreetamd",
 	"repository": {
 		"url": "https://github.com/sreetamdas/karma"
@@ -10,6 +10,7 @@
 	"engines": {
 		"vscode": "^1.41.0"
 	},
+	"icon": "./images/karmaLogo.png",
 	"categories": [
 		"Themes"
 	],

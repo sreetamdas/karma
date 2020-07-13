@@ -1,9 +1,20 @@
-# [Karma](https://marketplace.visualstudio.com/items?itemName=SreetamD.karma)
+<p align="center">
+	<img src="./images/karma.png"  alt="Karma TSX Screenshot" />
+</p>
 
-![Karma Preview](./karma.png)
+<h1 align="center">
+	<a href="https://marketplace.visualstudio.com/items?itemName=SreetamD.karma">Karma</a>
+</h1>
+<p align="center">
+	A mix of Ayu, Andromeda and Lucy for <code>React + Typescript</code>
+</p>
 
-A mix of Ayu, Andromeda and Lucy for React+Typescript
+Install directly or from the [marketplace](https://marketplace.visualstudio.com/items?itemName=SreetamD.karma)
 
-[Install directly](vscode:extension/SreetamD.karma) or from the [marketplace](https://marketplace.visualstudio.com/items?itemName=SreetamD.karma)
+<br />
+<br />
+<br />
+<br />
+<br />
 
 > font in screenshot: [Dank Mono](https://dank.sh)
