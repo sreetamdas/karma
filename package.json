@@ -10,7 +10,7 @@
 	"engines": {
 		"vscode": "^1.41.0"
 	},
-	"icon": "./images/karmaLogo.png",
+	"icon": "images/karmaLogo.png",
 	"categories": [
 		"Themes"
 	],
