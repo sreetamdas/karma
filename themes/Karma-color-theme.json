@@ -858,10 +858,6 @@
 			"settings": { "foreground": "#fd9353" }
 		},
 		{
-			"scope": "variable.other.readwrite.tsx",
-			"settings": { "foreground": "#e3cf65" }
-		},
-		{
 			"scope": [
 				"source.ruby variable.other.readwrite.instance.ruby",
 				"source.ruby variable.other.readwrite.class.ruby"
