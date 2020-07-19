@@ -4,6 +4,7 @@
 	"description": "A mix of Ayu, Andromeda and Lucy for React+Typescript",
 	"version": "2.2.1",
 	"publisher": "sreetamd",
+	"license": "MIT",
 	"scripts": {
 		"release": "standard-version"
 	},
@@ -33,5 +34,21 @@
 	},
 	"resolutions": {
 		"**/**/lodash": "^4.17.19"
+	},
+	"standard-version": {
+		"types": [
+			{
+				"type": "feat",
+				"section": "Features"
+			},
+			{
+				"type": "fix",
+				"section": "Bug Fixes"
+			},
+			{
+				"type": "improvements",
+				"section": "Improvements"
+			}
+		]
 	}
 }
