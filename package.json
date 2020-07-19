@@ -4,6 +4,9 @@
 	"description": "A mix of Ayu, Andromeda and Lucy for React+Typescript",
 	"version": "2.2.1",
 	"publisher": "sreetamd",
+	"scripts": {
+		"release": "standard-version"
+	},
 	"repository": {
 		"url": "https://github.com/sreetamdas/karma"
 	},
@@ -25,6 +28,7 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
+		"standard-version": "^8.0.2",
 		"vsce": "^1.75.0"
 	},
 	"resolutions": {
