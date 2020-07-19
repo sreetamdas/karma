@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.4](https://github.com/sreetamdas/karma/compare/v2.2.3...v2.2.4) (2020-07-19)
+
+
+### Bug Fixes
+
+* text back to white, remove meta.var in favour of variable.other.readwrite.tsx ([bf34dbe](https://github.com/sreetamdas/karma/commit/bf34dbe473bc363da97e773675c23e5a7ee1ebc9))
+
 ### [2.2.3](https://github.com/sreetamdas/karma/compare/v2.2.2...v2.2.3) (2020-07-19)
 
 ### Bug Fixes

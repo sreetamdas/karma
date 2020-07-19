@@ -2,7 +2,7 @@
 	"name": "karma",
 	"displayName": "Karma",
 	"description": "A mix of Ayu, Andromeda and Lucy for React+Typescript",
-	"version": "2.2.3",
+	"version": "2.2.4",
 	"publisher": "sreetamd",
 	"license": "MIT",
 	"scripts": {
