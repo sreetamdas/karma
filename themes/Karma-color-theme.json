@@ -5,7 +5,6 @@
 	"colors": {
 		"activityBar.background": "#0a0e14",
 		"activityBar.border": "#0a0e14",
-		"activityBar.dropBackground": "#0a0e14bf",
 		"activityBar.foreground": "#bab6c0",
 		"activityBar.inactiveForeground": "#525053",
 		"activityBarBadge.background": "#fce566",
@@ -169,7 +168,6 @@
 		"notificationToast.border": "#0a0e14",
 		"panel.background": "#0a0e14",
 		"panel.border": "#0a0e14",
-		"panel.dropBackground": "#0a0e14bf",
 		"panelTitle.activeBorder": "#fce566",
 		"panelTitle.activeForeground": "#fce566",
 		"panelTitle.inactiveForeground": "#0a0e14",
@@ -509,7 +507,8 @@
 		{
 			"scope": [
 				"meta.function-call",
-				"meta.function-call.arguments meta.function-call"
+				"meta.function-call.arguments meta.function-call",
+				"meta.var"
 			],
 			"settings": { "foreground": "#7bd88f" }
 		},
@@ -671,7 +670,7 @@
 		{ "scope": "region.purplish", "settings": { "foreground": "#af98e6" } },
 		{ "scope": "region.pinkish", "settings": { "foreground": "#fc618d" } },
 		{ "scope": "region.whitish", "settings": { "foreground": "#dfdfdf" } },
-		{ "scope": "source", "settings": { "foreground": "#d7d7d7" } },
+		{ "scope": "source", "settings": { "foreground": "#fd9353" } },
 		{
 			"scope": ["source.scss", "source.sass"],
 			"settings": { "foreground": "#88898f" }
@@ -820,7 +819,9 @@
 		},
 		{
 			"scope": ["variable", "variable.other"],
-			"settings": { "foreground": "#d7d7d7" }
+			"settings": {
+				// "foreground": "#d7d7d7"
+			}
 		},
 		{
 			"scope": ["variable.parameter", "parameters variable.function"],
