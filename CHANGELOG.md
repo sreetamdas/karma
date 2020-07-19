@@ -4,17 +4,15 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [2.2.3](https://github.com/sreetamdas/karma/compare/v2.2.2...v2.2.3) (2020-07-19)
 
-
 ### Bug Fixes
 
-* white => orange for source scope ([7ccde77](https://github.com/sreetamdas/karma/commit/7ccde7788a54d3ff00aa28ba474045295958fc05))
+-   white => orange for source scope ([7ccde77](https://github.com/sreetamdas/karma/commit/7ccde7788a54d3ff00aa28ba474045295958fc05))
 
 ### [2.2.2](https://github.com/sreetamdas/karma/compare/v2.2.0...v2.2.2) (2020-07-19)
 
-
 ### Bug Fixes
 
-* dependabot alert for lodash, casing in README ([ab3eef1](https://github.com/sreetamdas/karma/commit/ab3eef177c9430e59ae8b83f770cb285c0fdf571))
+-   dependabot alert for lodash, casing in README ([ab3eef1](https://github.com/sreetamdas/karma/commit/ab3eef177c9430e59ae8b83f770cb285c0fdf571))
 
 # Changelog
 

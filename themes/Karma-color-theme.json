@@ -507,8 +507,7 @@
 		{
 			"scope": [
 				"meta.function-call",
-				"meta.function-call.arguments meta.function-call",
-				"meta.var"
+				"meta.function-call.arguments meta.function-call"
 			],
 			"settings": { "foreground": "#7bd88f" }
 		},
@@ -857,6 +856,10 @@
 		{
 			"scope": "variable.other.substitution",
 			"settings": { "foreground": "#fd9353" }
+		},
+		{
+			"scope": "variable.other.readwrite.tsx",
+			"settings": { "foreground": "#e3cf65" }
 		},
 		{
 			"scope": [
