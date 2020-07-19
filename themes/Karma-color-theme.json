@@ -670,7 +670,7 @@
 		{ "scope": "region.purplish", "settings": { "foreground": "#af98e6" } },
 		{ "scope": "region.pinkish", "settings": { "foreground": "#fc618d" } },
 		{ "scope": "region.whitish", "settings": { "foreground": "#dfdfdf" } },
-		{ "scope": "source", "settings": { "foreground": "#fd9353" } },
+		{ "scope": "source", "settings": { "foreground": "#d7d7d7" } },
 		{
 			"scope": ["source.scss", "source.sass"],
 			"settings": { "foreground": "#88898f" }
