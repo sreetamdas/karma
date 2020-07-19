@@ -6,7 +6,7 @@
 	<a href="https://marketplace.visualstudio.com/items?itemName=SreetamD.karma">Karma</a>
 </h1>
 <p align="center">
-	A mix of Ayu, Andromeda and Lucy for <code>React + Typescript</code>
+	A mix of Ayu, Andromeda and Lucy for <code>React + TypeScript</code>
 </p>
 
 Install directly or from the [marketplace](https://marketplace.visualstudio.com/items?itemName=SreetamD.karma)

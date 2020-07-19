@@ -26,5 +26,8 @@
 	"dependencies": {},
 	"devDependencies": {
 		"vsce": "^1.75.0"
+	},
+	"resolutions": {
+		"**/**/lodash": "^4.17.19"
 	}
 }
