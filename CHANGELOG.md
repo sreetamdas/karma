@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.7](https://github.com/sreetamdas/karma/compare/v2.2.6...v2.2.7) (2020-07-20)
+
 ### [2.2.6](https://github.com/sreetamdas/karma/compare/v2.2.5...v2.2.6) (2020-07-20)
 
 ### [2.2.5](https://github.com/sreetamdas/karma/compare/v2.2.4...v2.2.5) (2020-07-19)
