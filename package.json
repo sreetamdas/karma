@@ -1,8 +1,8 @@
 {
 	"name": "karma",
 	"displayName": "Karma",
-	"description": "A mix of Ayu, Andromeda and Lucy for React+Typescript",
-	"version": "2.2.7",
+	"description": "A colorful VSCode theme with a mix of Ayu, Andromeda and Lucy themes",
+	"version": "2.3.0",
 	"publisher": "sreetamd",
 	"license": "MIT",
 	"scripts": {
