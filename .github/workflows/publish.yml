@@ -1,17 +1,17 @@
 name: Publish VSCE Package
 
 on:
-  push:
-    branches:
-      - master
+    push:
+        branches:
+            - main
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - uses: lannonbr/vsce-action@master
-      with:
-        args: "publish -p $VSCE_TOKEN"
-      env:
-        VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: lannonbr/vsce-action@master
+              with:
+                  args: "publish -p $VSCE_TOKEN"
+              env:
+                  VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
