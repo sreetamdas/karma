@@ -314,7 +314,7 @@
 		},
 		{
 			"scope": "comment storage.type",
-			"settings": { "foreground": "#363742" }
+			"settings": { "foreground": "#696969" }
 		},
 		{
 			"scope": "comment entity.name.type",
@@ -638,7 +638,7 @@
 		},
 		{
 			"scope": "punctuation.definition.comment",
-			"settings": { "foreground": "#363742" }
+			"settings": { "foreground": "#696969" }
 		},
 		{
 			"scope": [
