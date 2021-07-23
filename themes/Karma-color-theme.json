@@ -92,7 +92,7 @@
 		"editorInfo.border": "#0a0e14",
 		"editorInfo.foreground": "#5ad4e6",
 		"editorLineNumber.activeForeground": "#a86efd",
-		"editorLineNumber.foreground": "#1c2025",
+		"editorLineNumber.foreground": "#444444",
 		"editorLink.activeForeground": "#5ad4e6",
 		"editorMarkerNavigation.background": "#0a0e14",
 		"editorMarkerNavigationError.background": "#fc618d",
@@ -183,10 +183,10 @@
 		"notifications.foreground": "#bab6c0",
 		"notificationToast.border": "#0a0e14",
 		"panel.background": "#0a0e14",
-		"panel.border": "#00000000",
+		"panel.border": "#0a0e14",
 		"panelTitle.activeBorder": "#fce566",
 		"panelTitle.activeForeground": "#fce566",
-		"panelTitle.inactiveForeground": "#31313188",
+		"panelTitle.inactiveForeground": "#696969",
 		"peekView.border": "#0a0e14",
 		"peekViewEditor.background": "#0a0e14",
 		"peekViewEditor.matchHighlightBackground": "#525053",
@@ -774,10 +774,7 @@
 			"settings": { "foreground": "#88898f" }
 		},
 		{
-			"scope": [
-				"string.other.link.title",
-				"string.other.link.description"
-			],
+			"scope": ["string.other.link.title", "string.other.link.description"],
 			"settings": { "foreground": "#fc618d" }
 		},
 		{
