@@ -91,6 +91,8 @@
 		"editorIndentGuide.background": "#1c2025",
 		"editorInfo.border": "#0a0e14",
 		"editorInfo.foreground": "#5ad4e6",
+		"editorInlayHint.foreground": "#D7D7D7",
+		"editorInlayHint.background": "#444444",
 		"editorLineNumber.activeForeground": "#a86efd",
 		"editorLineNumber.foreground": "#444444",
 		"editorLink.activeForeground": "#5ad4e6",
