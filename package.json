@@ -1,15 +1,15 @@
 {
-	"name": "karma",
+	"name": "@sreetamdas/karma",
 	"displayName": "Karma",
 	"description": "A colorful VSCode theme with a mix of Ayu, Andromeda and Lucy themes",
-	"version": "2.3.3",
+	"version": "2.3.4",
 	"publisher": "sreetamd",
 	"license": "MIT",
 	"scripts": {
 		"release": "standard-version"
 	},
 	"repository": {
-		"url": "https://github.com/sreetamdas/karma"
+		"url": "git+https://github.com/sreetamdas/karma.git"
 	},
 	"engines": {
 		"vscode": "^1.41.0"
@@ -27,7 +27,6 @@
 			}
 		]
 	},
-	"dependencies": {},
 	"devDependencies": {
 		"standard-version": "^8.0.2",
 		"vsce": "^1.75.0"
@@ -56,5 +55,15 @@
 				"section": "Improvements"
 			}
 		]
-	}
+	},
+	"bugs": {
+		"url": "https://github.com/sreetamdas/karma/issues"
+	},
+	"homepage": "https://github.com/sreetamdas/karma#readme",
+	"main": "index.js",
+	"keywords": [
+		"Karma",
+		"theme"
+	],
+	"author": "Sreetam Das"
 }
