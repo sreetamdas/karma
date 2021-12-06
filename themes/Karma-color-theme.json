@@ -1,7 +1,7 @@
 {
 	"name": "Karma",
 	"type": "dark",
-	"author": "Monokai",
+	"author": "Sreetam Das <sreetamdas@gmail.com>",
 	"semanticHighlighting": true,
 	"semanticTokenColors": {
 		"function": {
@@ -66,6 +66,14 @@
 		"editor.wordHighlightBorder": "#00000000",
 		"editor.wordHighlightStrongBackground": "#f7f1ff26",
 		"editor.wordHighlightStrongBorder": "#00000000",
+
+		/**
+		 * Editor Bracket Highlights and Indent Guides
+		 */
+		"editorBracketHighlight.foreground1": "#E3CF65",
+		"editorBracketHighlight.foreground2": "#FC618D",
+		"editorBracketHighlight.foreground3": "#51C7DA",
+
 		"editorBracketMatch.background": "#0a0e14",
 		"editorBracketMatch.border": "#00000000",
 		"editorCodeLens.foreground": "#69676c",
@@ -85,7 +93,7 @@
 		"editorGutter.deletedBackground": "#fc618d",
 		"editorGutter.modifiedBackground": "#fd9353",
 		"editorHint.border": "#0a0e14",
-		"editorHint.foreground": "#948ae3",
+		"editorHint.foreground": "#AF98E6",
 		"editorHoverWidget.background": "#0a0e14",
 		"editorHoverWidget.border": "#00000000",
 		"editorIndentGuide.background": "#1c2025",
@@ -176,6 +184,16 @@
 		"merge.currentHeaderBackground": "#fc618d26",
 		"merge.incomingContentBackground": "#7bd88f19",
 		"merge.incomingHeaderBackground": "#7bd88f26",
+
+		/**
+		 * Notebooks
+		 */
+		"notebook.cellBorderColor": "#333333",
+		"notebook.focusedCellBorder": "#a86efd",
+		"notebook.focusedEditorBorder": "#a76efd80",
+		"notebook.cellHoverBackground": "#bab6c026",
+		"notebook.outputContainerBackgroundColor": "#bab6c026",
+
 		"notificationCenter.border": "#0a0e14",
 		"notificationCenterHeader.background": "#0a0e14",
 		"notificationCenterHeader.foreground": "#8b888f",
@@ -268,13 +286,13 @@
 		"terminal.ansiBrightBlue": "#fd9353",
 		"terminal.ansiBrightCyan": "#5ad4e6",
 		"terminal.ansiBrightGreen": "#7bd88f",
-		"terminal.ansiBrightMagenta": "#948ae3",
+		"terminal.ansiBrightMagenta": "#AF98E6",
 		"terminal.ansiBrightRed": "#fc618d",
 		"terminal.ansiBrightWhite": "#f7f1ff",
 		"terminal.ansiBrightYellow": "#fce566",
 		"terminal.ansiCyan": "#5ad4e6",
 		"terminal.ansiGreen": "#7bd88f",
-		"terminal.ansiMagenta": "#948ae3",
+		"terminal.ansiMagenta": "#AF98E6",
 		"terminal.ansiRed": "#fc618d",
 		"terminal.ansiWhite": "#f7f1ff",
 		"terminal.ansiYellow": "#fce566",
@@ -297,8 +315,6 @@
 		"titleBar.inactiveBackground": "#0a0e14",
 		"titleBar.inactiveForeground": "#525053",
 		"walkThrough.embeddedEditorBackground": "#0a0e14",
-		"welcomePage.buttonBackground": "#0a0e14",
-		"welcomePage.buttonHoverBackground": "#525053",
 		"widget.shadow": "#0a0e14"
 	},
 	"tokenColors": [
