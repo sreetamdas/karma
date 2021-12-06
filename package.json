@@ -2,7 +2,7 @@
 	"name": "@sreetamdas/karma",
 	"displayName": "Karma",
 	"description": "A colorful VSCode theme with a mix of Ayu, Andromeda and Lucy themes",
-	"version": "2.3.4",
+	"version": "2.4.0",
 	"publisher": "sreetamd",
 	"license": "MIT",
 	"scripts": {
