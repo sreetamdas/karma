@@ -67,9 +67,6 @@
 		"editor.wordHighlightStrongBackground": "#f7f1ff26",
 		"editor.wordHighlightStrongBorder": "#00000000",
 
-		/**
-		 * Editor Bracket Highlights and Indent Guides
-		 */
 		"editorBracketHighlight.foreground1": "#E3CF65",
 		"editorBracketHighlight.foreground2": "#FC618D",
 		"editorBracketHighlight.foreground3": "#51C7DA",
@@ -185,9 +182,6 @@
 		"merge.incomingContentBackground": "#7bd88f19",
 		"merge.incomingHeaderBackground": "#7bd88f26",
 
-		/**
-		 * Notebooks
-		 */
 		"notebook.cellBorderColor": "#333333",
 		"notebook.focusedCellBorder": "#a86efd",
 		"notebook.focusedEditorBorder": "#a76efd80",
