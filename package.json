@@ -1,5 +1,5 @@
 {
-	"name": "@sreetamdas/karma",
+	"name": "karma",
 	"displayName": "Karma",
 	"description": "A colorful VSCode theme with a mix of Ayu, Andromeda and Lucy themes",
 	"version": "2.4.0",
@@ -38,9 +38,6 @@
 		"**/**/y18n": "^4.0.1"
 	},
 	"standard-version": {
-		"skip": {
-			"changelog": true
-		},
 		"types": [
 			{
 				"type": "feat",
