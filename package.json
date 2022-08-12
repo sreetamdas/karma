@@ -1,57 +1,61 @@
 {
 	"name": "karma",
 	"displayName": "Karma",
-	"description": "A colorful VSCode theme with a mix of Ayu, Andromeda and Lucy themes",
+	"description": "A colorful VS Code theme",
 	"version": "2.4.0",
 	"publisher": "sreetamd",
+	"author": "Sreetam Das",
 	"license": "MIT",
+	"galleryBanner": {
+		"color": "#1b1f23",
+		"theme": "dark"
+	},
+	"icon": "logo.png",
 	"scripts": {
-		"release": "standard-version"
+		"start": "tsx watch src/index.ts",
+		"dev": "pnpm run start",
+		"build": "rimraf ./dist && tsup",
+		"prepublishOnly": "npm run build",
+		"release": "vsce publish"
 	},
 	"repository": {
-		"url": "git+https://github.com/sreetamdas/karma.git"
+		"url": "https://github.com/sreetamdas/karma.git"
 	},
 	"engines": {
 		"vscode": "^1.41.0"
 	},
-	"icon": "images/karmaLogo.png",
 	"categories": [
 		"Themes"
 	],
 	"contributes": {
 		"themes": [
 			{
-				"label": "Karma",
+				"label": "Karma v3",
+				"uiTheme": "vs-dark",
+				"path": "./themes/default.json"
+			},
+			{
+				"label": "Karma Light",
+				"uiTheme": "vs",
+				"path": "./themes/Karma-light-color-theme.json"
+			},
+			{
+				"label": "Karma ",
 				"uiTheme": "vs-dark",
 				"path": "./themes/Karma-color-theme.json"
 			}
 		]
 	},
 	"devDependencies": {
-		"standard-version": "^8.0.2",
-		"vsce": "^1.75.0"
-	},
-	"resolutions": {
-		"**/**/lodash": "^4.17.19",
-		"**/**/dot-prop": "^4.2.1",
-		"**/**/ini": "^1.3.6",
-		"**/**/y18n": "^4.0.1"
-	},
-	"standard-version": {
-		"types": [
-			{
-				"type": "feat",
-				"section": "Features"
-			},
-			{
-				"type": "fix",
-				"section": "Bug Fixes"
-			},
-			{
-				"type": "improvements",
-				"section": "Improvements"
-			}
-		]
+		"@types/chroma-js": "^2.1.4",
+		"@types/color": "^3.0.3",
+		"@types/node": "^18.7.2",
+		"chroma-js": "^2.4.2",
+		"color": "^4.2.3",
+		"tsup": "^6.2.1",
+		"tsx": "^3.8.2",
+		"typescript": "^4.7.4",
+		"vsce": "^2.10.0"
 	},
 	"bugs": {
 		"url": "https://github.com/sreetamdas/karma/issues"
@@ -59,7 +63,8 @@
 	"homepage": "https://github.com/sreetamdas/karma#readme",
 	"keywords": [
 		"Karma",
-		"theme"
-	],
-	"author": "Sreetam Das"
+		"theme",
+		"dark",
+		"light"
+	]
 }
