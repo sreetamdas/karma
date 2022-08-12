@@ -36,4 +36,8 @@ export const KARMA = {
 		19: "#fc618d19",
 		20: "#fc618d26",
 	},
+	faints: {
+		green: "#7bd88f19",
+		purple: "#a76efd66"
+	}
 } as const;
