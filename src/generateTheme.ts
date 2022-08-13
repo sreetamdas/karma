@@ -9,7 +9,6 @@ const {
 	black,
 	white,
 	blue,
-	blue2,
 	green,
 	orange,
 	purple,
@@ -27,7 +26,24 @@ const {
 export function generateTheme() {
 	return {
 		name: "Karma",
-		type: "light",
+		type: "dark",
+		author: "Sreetam Das <sreetamdas@gmail.com>",
+		semanticHighlighting: true,
+		semanticTokenColors: {
+			function: {
+				foreground: green,
+			},
+			variable: purple,
+			interface: {
+				foreground: green,
+				italic: true,
+			},
+			type: {
+				foreground: green,
+				italic: true,
+			},
+			property: { foreground: gray[10] },
+		},
 		colors: {
 			focusBorder: black,
 			foreground: white,
@@ -42,7 +58,7 @@ export function generateTheme() {
 			"textPreformat.foreground": white,
 			"textSeparator.foreground": gray[6],
 
-			// "icon.foreground": color.fg.muted,
+			"icon.foreground": gray[10],
 			"button.background": black,
 			"button.foreground": gray[7],
 			"button.hoverBackground": faint,
@@ -163,10 +179,10 @@ export function generateTheme() {
 			"editor.linkedEditingBackground": faint,
 			"editor.inactiveSelectionBackground": gray[17],
 			"editor.selectionBackground": gray[16],
-			"editor.selectionHighlightBackground": faints.purple,
-			"editor.wordHighlightBackground": faints.purple,
+			"editor.selectionHighlightBackground": gray[18],
+			"editor.wordHighlightBackground": gray[18],
 			"editor.wordHighlightBorder": black,
-			"editor.wordHighlightStrongBackground": faints.blue,
+			"editor.wordHighlightStrongBackground": gray[18],
 			"editor.wordHighlightStrongBorder": black,
 			"editorBracketMatch.background": black,
 			"editorBracketMatch.border": black,
@@ -176,6 +192,7 @@ export function generateTheme() {
 			"editor.rangeHighlightBorder": black,
 			"editor.selectionHighlightBorder": black,
 			"editor.lineHighlightBorder": black,
+			"selection.background": gray[18],
 
 			"editorIndentGuide.background": faint,
 			"editorWhitespace.foreground": gray[4],
@@ -204,16 +221,12 @@ export function generateTheme() {
 
 			"editorError.foreground": red,
 			"editorError.border": black,
-			// "editorError.background": black,
 			"editorWarning.foreground": orange,
 			"editorWarning.border": black,
-			// "editorWarning.background": black,
 			"editorInfo.foreground": blue,
 			"editorInfo.border": black,
-			// "editorInfo.background": black,
 			"editorHint.foreground": purple,
 			"editorHint.border": black,
-			// "editorHint.background": black,
 
 			"editorGutter.background": black,
 			"editorGutter.addedBackground": green,
@@ -224,9 +237,8 @@ export function generateTheme() {
 			"diffEditor.insertedTextBorder": black,
 			"diffEditor.removedTextBackground": gray[19],
 			"diffEditor.removedTextBorder": black,
-			// "tree.indentGuidesStroke": color.border.muted,
+			"tree.indentGuidesStroke": faint,
 
-			// TODO
 			"editorWidget.background": black,
 			"editorWidget.border": black,
 			"editorSuggestWidget.background": black,
@@ -271,8 +283,7 @@ export function generateTheme() {
 			"panelInput.border": black,
 			"panelSection.dropBackground": gray[14],
 			"panelSectionHeader.background": black,
-			// TODO check this up
-			"panelSectionHeader.foreground": red,
+			"panelSectionHeader.foreground": gray[7],
 			"panelTitle.activeBorder": yellow,
 			"panelTitle.activeForeground": yellow,
 			"panelTitle.inactiveForeground": gray[6],
@@ -315,55 +326,11 @@ export function generateTheme() {
 
 			"pickerGroup.border": black,
 			"pickerGroup.foreground": gray[4],
-			// "quickInput.background": black,
-			// "quickInput.foreground": yellow,
 			"quickInputList.focusBackground": gray[15],
-			// "quickInputList.focusForeground": yellow,
 
 			"keybindingLabel.background": gray[16],
 			"keybindingLabel.foreground": gray[10],
 			"keybindingLabel.border": black,
-
-			// "editorGroupHeader.tabsBackground": color.canvas.inset,
-			// "editorGroupHeader.tabsBorder": color.border.default,
-			// "editorGroup.border": color.border.default,
-
-			// "editorWidget.background": color.canvas.overlay,
-			// "editor.foldBackground": alpha(color.neutral.emphasis, 0.1),
-			// "editor.lineHighlightBackground": color.codemirror.activelineBg,
-
-			// "editorIndentGuide.activeBackground": alpha(color.fg.default, 0.24),
-			// "editorWhitespace.foreground": lightDark(scale.gray[3], scale.gray[5]),
-			// "editorCursor.foreground": color.accent.fg,
-
-			// "editorInlayHint.typeBackground": alpha(scale.gray[3], 0.2),
-			// "editorInlayHint.typeForeground": color.fg.muted,
-			// "editorInlayHint.paramBackground": alpha(scale.gray[3], 0.2),
-			// "editorInlayHint.paramForeground": color.fg.muted,
-
-			// "debugIcon.breakpointForeground": color.danger.fg,
-
-			// "debugConsole.infoForeground": lightDark(scale.gray[6], scale.gray[3]),
-			// "debugConsole.warningForeground": lightDark(
-			// 	scale.yellow[6],
-			// 	scale.yellow[3],
-			// ),
-			// "debugConsole.errorForeground": lightDark(scale.red[5], scale.red[2]),
-			// "debugConsole.sourceForeground": lightDark(
-			// 	scale.yellow[5],
-			// 	scale.yellow[2],
-			// ),
-			// "debugConsoleInputIcon.foreground": lightDark(
-			// 	scale.purple[6],
-			// 	scale.purple[3],
-			// ),
-
-			// "debugTokenExpression.name": lightDark(scale.blue[6], scale.blue[2]),
-			// "debugTokenExpression.value": lightDark(scale.blue[8], scale.blue[1]),
-			// "debugTokenExpression.string": lightDark(scale.blue[8], scale.blue[1]),
-			// "debugTokenExpression.boolean": lightDark(scale.green[6], scale.green[2]),
-			// "debugTokenExpression.number": lightDark(scale.green[6], scale.green[2]),
-			// "debugTokenExpression.error": lightDark(scale.red[6], scale.red[2]),
 
 			"symbolIcon.arrayForeground": orange,
 			"symbolIcon.booleanForeground": blue,
@@ -420,6 +387,12 @@ export function generateTheme() {
 			"terminal.ansiBrightCyan": blue,
 			"terminal.ansiBrightWhite": white,
 
+			"terminalCommandDecoration.defaultBackground": gray[4],
+			"terminalCommandDecoration.successBackground": green,
+			"terminalCommandDecoration.errorBackground": red,
+			"terminalOverviewRuler.cursorForeground": purple,
+			"terminalOverviewRuler.findMatchForeground": gray[12],
+
 			"walkThrough.embeddedEditorBackground": black,
 			"widget.shadow": black,
 
@@ -431,18 +404,6 @@ export function generateTheme() {
 			"gitDecoration.conflictingResourceForeground": orange,
 			"gitDecoration.submoduleResourceForeground": green,
 
-			// "debugToolBar.background": color.canvas.overlay,
-			// "editor.stackFrameHighlightBackground": color.attention.muted,
-			// "editor.focusedStackFrameHighlightBackground": color.success.muted,
-
-			// "peekViewEditor.matchHighlightBackground": onlyDark(
-			// 	color.attention.muted,
-			// ),
-			// "peekViewResult.matchHighlightBackground": onlyDark(
-			// 	color.attention.muted,
-			// ),
-			// "peekViewEditor.background": onlyDark(color.neutral.subtle),
-			// "peekViewResult.background": onlyDark(scale.gray[9]),
 			"settings.checkboxBackground": black,
 			"settings.checkboxBorder": black,
 			"settings.checkboxForeground": white,
@@ -466,29 +427,11 @@ export function generateTheme() {
 			"notebook.editorBackground": black,
 			"notebook.cellBorderColor": gray[1],
 			"notebook.cellHoverBackground": gray[16],
-			// "notebook.cellInsertionIndicator": "",
-			// "notebook.cellStatusBarItemHoverBackground": "",
-			// "notebook.cellToolbarSeparator": "",
-			// "notebook.cellEditorBackground": "",
-			// "notebook.focusedCellBackground": "",
 			"notebook.focusedCellBorder": highlight,
 			"notebook.focusedEditorBorder": highlight2,
-			// "notebook.inactiveFocusedCellBorder": "",
-			// "notebook.inactiveSelectedCellBorder": "",
-			"notebook.outputContainerBackgroundColor": gray[16],
-			// "notebook.outputContainerBorderColor": "",
-			// "notebook.selectedCellBackground": "",
-			// "notebook.selectedCellBorder": "",
-			// "notebook.symbolHighlightBackground": "",
-			// "notebookScrollbarSlider.activeBackground": "",
-			// "notebookScrollbarSlider.background": "",
-			// "notebookScrollbarSlider.hoverBackground": "",
-			// "notebookStatusErrorIcon.foreground": "",
-			// "notebookStatusRunningIcon.foreground": "",
-			// "notebookStatusSuccessIcon.foreground": "",
-		},
 
-		// token colors
+			"notebook.outputContainerBackgroundColor": gray[16],
+		},
 		tokenColors: [
 			{
 				scope: [
@@ -566,7 +509,7 @@ export function generateTheme() {
 			},
 			{
 				scope: "constant.numeric.line-number.find-in-files",
-				settings: { foreground: "#494c59" },
+				settings: { foreground: gray[3] },
 			},
 			{
 				scope: "constant.numeric.line-number.match.find-in-files",

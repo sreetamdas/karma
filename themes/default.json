@@ -1,6 +1,25 @@
 {
   "name": "Karma",
-  "type": "light",
+  "type": "dark",
+  "author": "Sreetam Das <sreetamdas@gmail.com>",
+  "semanticHighlighting": true,
+  "semanticTokenColors": {
+    "function": {
+      "foreground": "#7BD88F"
+    },
+    "variable": "#AF98E6",
+    "interface": {
+      "foreground": "#7BD88F",
+      "italic": true
+    },
+    "type": {
+      "foreground": "#7BD88F",
+      "italic": true
+    },
+    "property": {
+      "foreground": "#D7D7D7"
+    }
+  },
   "colors": {
     "focusBorder": "#0A0E14",
     "foreground": "#F7F1FF",
@@ -13,6 +32,7 @@
     "textCodeBlock.background": "#1c2025",
     "textPreformat.foreground": "#F7F1FF",
     "textSeparator.foreground": "#696969",
+    "icon.foreground": "#D7D7D7",
     "button.background": "#0A0E14",
     "button.foreground": "#88898f",
     "button.hoverBackground": "#1c2025",
@@ -119,10 +139,10 @@
     "editor.linkedEditingBackground": "#1c2025",
     "editor.inactiveSelectionBackground": "#f7f1ff19",
     "editor.selectionBackground": "#bab6c026",
-    "editor.selectionHighlightBackground": "#a76efd60",
-    "editor.wordHighlightBackground": "#a76efd60",
+    "editor.selectionHighlightBackground": "#f7f1ff26",
+    "editor.wordHighlightBackground": "#f7f1ff26",
     "editor.wordHighlightBorder": "#0A0E14",
-    "editor.wordHighlightStrongBackground": "#5AD4E660",
+    "editor.wordHighlightStrongBackground": "#f7f1ff26",
     "editor.wordHighlightStrongBorder": "#0A0E14",
     "editorBracketMatch.background": "#0A0E14",
     "editorBracketMatch.border": "#0A0E14",
@@ -132,6 +152,7 @@
     "editor.rangeHighlightBorder": "#0A0E14",
     "editor.selectionHighlightBorder": "#0A0E14",
     "editor.lineHighlightBorder": "#0A0E14",
+    "selection.background": "#f7f1ff26",
     "editorIndentGuide.background": "#1c2025",
     "editorWhitespace.foreground": "#525053",
     "editorInlayHint.background": "#0A0E14",
@@ -170,6 +191,7 @@
     "diffEditor.insertedTextBorder": "#0A0E14",
     "diffEditor.removedTextBackground": "#fc618d19",
     "diffEditor.removedTextBorder": "#0A0E14",
+    "tree.indentGuidesStroke": "#1c2025",
     "editorWidget.background": "#0A0E14",
     "editorWidget.border": "#0A0E14",
     "editorSuggestWidget.background": "#0A0E14",
@@ -209,7 +231,7 @@
     "panelInput.border": "#0A0E14",
     "panelSection.dropBackground": "#f7f1ff0c",
     "panelSectionHeader.background": "#0A0E14",
-    "panelSectionHeader.foreground": "#FC618D",
+    "panelSectionHeader.foreground": "#88898f",
     "panelTitle.activeBorder": "#fce566",
     "panelTitle.activeForeground": "#fce566",
     "panelTitle.inactiveForeground": "#696969",
@@ -304,6 +326,11 @@
     "terminal.ansiBrightMagenta": "#FD9353",
     "terminal.ansiBrightCyan": "#5AD4E6",
     "terminal.ansiBrightWhite": "#F7F1FF",
+    "terminalCommandDecoration.defaultBackground": "#525053",
+    "terminalCommandDecoration.successBackground": "#7BD88F",
+    "terminalCommandDecoration.errorBackground": "#FC618D",
+    "terminalOverviewRuler.cursorForeground": "#AF98E6",
+    "terminalOverviewRuler.findMatchForeground": "#c3b5d3",
     "walkThrough.embeddedEditorBackground": "#0A0E14",
     "widget.shadow": "#0A0E14",
     "gitDecoration.addedResourceForeground": "#5AD4E6",
