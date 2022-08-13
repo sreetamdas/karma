@@ -1,3 +1,8 @@
+/**
+ * Check out the VS Code docs
+ * @see https://code.visualstudio.com/api/references/theme-color
+ */
+
 import { KARMA } from "./tokens";
 
 export function generateTheme() {
@@ -149,9 +154,9 @@ export function generateTheme() {
 			"editor.inactiveSelectionBackground": KARMA.gray[17],
 			"editor.selectionBackground": KARMA.gray[16],
 			"editor.selectionHighlightBackground": KARMA.faints.purple,
-			"editor.wordHighlightBackground": KARMA.highlight2,
+			"editor.wordHighlightBackground": KARMA.faints.purple,
 			"editor.wordHighlightBorder": KARMA.black,
-			"editor.wordHighlightStrongBackground": KARMA.highlight2,
+			"editor.wordHighlightStrongBackground": KARMA.faints.blue,
 			"editor.wordHighlightStrongBorder": KARMA.black,
 			"editorBracketMatch.background": KARMA.black,
 			"editorBracketMatch.border": KARMA.black,
@@ -161,16 +166,32 @@ export function generateTheme() {
 			"editorBracketHighlight.foreground3": KARMA.blue,
 			"editorBracketHighlight.unexpectedBracket.foreground": KARMA.orange, // gray
 
-			// "editorInlayHint.background": alpha(scale.gray[3], 0.2),
-			// "editorInlayHint.foreground": color.fg.muted,
+			"editorInlayHint.background": KARMA.black,
+			"editorInlayHint.foreground": KARMA.white,
 			// "editorInlayHint.typeBackground": alpha(scale.gray[3], 0.2),
 			// "editorInlayHint.typeForeground": color.fg.muted,
 			// "editorInlayHint.paramBackground": alpha(scale.gray[3], 0.2),
 			// "editorInlayHint.paramForeground": color.fg.muted,
 
-			// "editorGutter.modifiedBackground": color.attention.muted,
-			// "editorGutter.addedBackground": color.success.muted,
-			// "editorGutter.deletedBackground": color.danger.muted,
+			"editorGutter.background": KARMA.black,
+			"editorGutter.addedBackground": KARMA.green,
+			"editorGutter.modifiedBackground": KARMA.orange,
+			"editorGutter.deletedBackground": KARMA.red,
+
+			"editorOverviewRuler.border": KARMA.red,
+			"editorOverviewRuler.addedForeground": KARMA.green,
+			"editorOverviewRuler.currentContentForeground": KARMA.black,
+			"editorOverviewRuler.deletedForeground": KARMA.red,
+			"editorOverviewRuler.errorForeground": KARMA.red,
+			"editorOverviewRuler.findMatchForeground": KARMA.gray[18],
+			"editorOverviewRuler.incomingContentForeground": KARMA.black,
+			"editorOverviewRuler.infoForeground": KARMA.blue,
+			"editorOverviewRuler.modifiedForeground": KARMA.orange,
+			"editorOverviewRuler.rangeHighlightForeground": KARMA.gray[18],
+			"editorOverviewRuler.selectionHighlightForeground": KARMA.gray[18],
+			"editorOverviewRuler.warningForeground": KARMA.orange,
+			"editorOverviewRuler.wordHighlightForeground": KARMA.gray[18],
+			"editorOverviewRuler.wordHighlightStrongForeground": KARMA.gray[18],
 
 			// "diffEditor.insertedLineBackground": lightDark(
 			// 	alpha(scale.green[1], 0.3),
@@ -189,14 +210,13 @@ export function generateTheme() {
 			// 	alpha(scale.red[5], 0.3),
 			// ),
 
-			// "scrollbar.shadow": alpha(scale.gray[5], 0.2),
-			// "scrollbarSlider.background": alpha(scale.gray[4], 0.2),
-			// "scrollbarSlider.hoverBackground": alpha(scale.gray[4], 0.27),
-			// "scrollbarSlider.activeBackground": alpha(scale.gray[4], 0.53),
-			// "editorOverviewRuler.border": lightDark(scale.white, scale.black),
+			"scrollbar.shadow": KARMA.black,
+			"scrollbarSlider.background": KARMA.gray[15],
+			"scrollbarSlider.hoverBackground": KARMA.gray[15],
+			"scrollbarSlider.activeBackground": KARMA.gray[15],
 
-			// "panel.background": color.canvas.inset,
-			// "panel.border": color.border.default,
+			"panel.background": KARMA.black,
+			"panel.border": KARMA.black,
 			// "panelTitle.activeBorder": color.primer.border.active,
 			// "panelTitle.activeForeground": color.fg.default,
 			// "panelTitle.inactiveForeground": color.fg.muted,
