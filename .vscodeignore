@@ -1,4 +1,10 @@
 .vscode/**
 .vscode-test/**
 .gitignore
+.changeset/
+.github/
+/node_modules/
+/pnpm-lock.yaml
+/src/
+/build/
 vsc-extension-quickstart.md
