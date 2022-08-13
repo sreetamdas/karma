@@ -212,8 +212,12 @@ export function generateTheme() {
 
 			"scrollbar.shadow": KARMA.black,
 			"scrollbarSlider.background": KARMA.gray[15],
-			"scrollbarSlider.hoverBackground": KARMA.gray[15],
-			"scrollbarSlider.activeBackground": KARMA.gray[15],
+			"scrollbarSlider.hoverBackground": KARMA.gray[17],
+			"scrollbarSlider.activeBackground": KARMA.gray[18],
+
+			"minimapSlider.background": KARMA.gray[15],
+			"minimapSlider.hoverBackground": KARMA.gray[17],
+			"minimapSlider.activeBackground": KARMA.gray[18],
 
 			"panel.background": KARMA.black,
 			"panel.border": KARMA.black,
