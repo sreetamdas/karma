@@ -40,5 +40,10 @@ export const KARMA = {
 		green: "#7bd88f60",
 		blue: "#5AD4E660",
 		purple: "#a76efd60",
+		yellow: "#fce56660",
+	},
+	greens: {
+		100: "#7bd88f19",
+		200: "#7bd88f26",
 	},
 } as const;
