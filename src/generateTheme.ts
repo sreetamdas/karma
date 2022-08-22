@@ -3,30 +3,41 @@
  * @see https://code.visualstudio.com/api/references/theme-color
  */
 
-import { KARMA } from "./tokens";
+import { KARMA, KARMA_LIGHT } from "./tokens";
 
-const {
-	black,
-	white,
-	blue,
-	green,
-	orange,
-	purple,
-	highlight,
-	highlight2,
-	red,
-	yellow,
-	yellow2,
-	faint,
-	gray,
-	faints,
-	greens,
-} = KARMA;
+export type KarmaVariant = "default" | "light";
+export function generateTheme(variant: KarmaVariant = "default") {
+	let theme: typeof KARMA | typeof KARMA_LIGHT = KARMA;
 
-export function generateTheme() {
-	return {
+	if (variant === "default") {
+		theme = KARMA;
+	} else if (variant === "light") {
+		theme = KARMA_LIGHT;
+	}
+
+	const type = variant === "default" ? "dark" : "light";
+
+	const {
+		black,
+		white,
+		blue,
+		green,
+		orange,
+		purple,
+		highlight,
+		highlight2,
+		red,
+		yellow,
+		yellow2,
+		faint,
+		gray,
+		faints,
+		greens,
+	} = theme;
+
+	const themeConfig = {
 		name: "Karma",
-		type: "dark",
+		type,
 		author: "Sreetam Das <sreetamdas@gmail.com>",
 		semanticHighlighting: true,
 		semanticTokenColors: {
@@ -57,9 +68,10 @@ export function generateTheme() {
 			"textCodeBlock.background": faint,
 			"textPreformat.foreground": white,
 			"textSeparator.foreground": gray[6],
-
 			"icon.foreground": gray[10],
-			"button.background": black,
+			"sash.hoverBorder": faint,
+
+			"button.background": faint,
 			"button.foreground": gray[7],
 			"button.hoverBackground": faint,
 			"button.border": black,
@@ -69,8 +81,7 @@ export function generateTheme() {
 			"button.secondaryHoverBackground": faint,
 
 			"checkbox.background": black,
-			"checkbox.foreground": highlight,
-			"checkbox.border": highlight2,
+			"checkbox.border": faints.purple,
 
 			"dropdown.background": black,
 			"dropdown.border": black,
@@ -81,8 +92,9 @@ export function generateTheme() {
 			"input.border": faint,
 			"input.foreground": white,
 			"input.placeholderForeground": gray[6],
-			"inputOption.activeBackground": gray[4],
-			"inputOption.activeBorder": gray[4],
+			"inputOption.activeForeground": black,
+			"inputOption.activeBackground": green,
+			"inputOption.activeBorder": green,
 			"inputValidation.errorBackground": black,
 			"inputValidation.errorBorder": red,
 			"inputValidation.errorForeground": red,
@@ -168,6 +180,9 @@ export function generateTheme() {
 			"tab.unfocusedInactiveForeground": gray[7],
 			"tab.unfocusedInactiveModifiedBorder": black,
 			"editorPane.background": black,
+			// TODO fix this for 3-way merge editor
+			// "sideBySideEditor.horizontalBorder": red,
+			// "sideBySideEditor.verticalBorder": red,
 
 			"editor.foreground": white,
 			"editor.background": black,
@@ -268,19 +283,24 @@ export function generateTheme() {
 			"peekViewTitleDescription.foreground": gray[7],
 			"peekViewTitleLabel.foreground": white,
 
-			"merge.border": black,
+			"merge.border": faint,
 			"merge.commonContentBackground": gray[17],
 			"merge.commonHeaderBackground": gray[18],
 			"merge.currentContentBackground": gray[19],
 			"merge.currentHeaderBackground": gray[20],
 			"merge.incomingContentBackground": greens[100],
 			"merge.incomingHeaderBackground": greens[200],
+			"mergeEditor.change.background": red,
+			"mergeEditor.conflict.handledFocused.border": yellow,
+			"mergeEditor.conflict.handled.minimapOverViewRuler": yellow,
+			"mergeEditor.conflict.unHandled.minimapOverViewRuler": red,
 			// TODO merge editor
 
 			"panel.background": black,
 			"panel.border": black,
 			"panel.dropBorder": yellow,
 			"panelInput.border": black,
+			"panelSection.border": black,
 			"panelSection.dropBackground": gray[14],
 			"panelSectionHeader.background": black,
 			"panelSectionHeader.foreground": gray[7],
@@ -366,6 +386,37 @@ export function generateTheme() {
 			"symbolIcon.variableForeground": blue,
 			"symbolIcon.constantForeground": green,
 
+			// Icon color for breakpoints.
+			"debugIcon.breakpointForeground": red,
+			// Icon color for disabled breakpoints.
+			"debugIcon.breakpointDisabledForeground": faints.red,
+			// Icon color for unverified breakpoints.
+			"debugIcon.breakpointUnverifiedForeground": orange,
+			// Icon color for the current breakpoint stack frame.
+			"debugIcon.breakpointCurrentStackframeForeground": orange,
+			// Icon color for all breakpoint stack frames.
+			"debugIcon.breakpointStackframeForeground": orange,
+			// Debug toolbar icon for start debugging.
+			"debugIcon.startForeground": green,
+			// Debug toolbar icon for pause.
+			"debugIcon.pauseForeground": orange,
+			// Debug toolbar icon for stop.
+			"debugIcon.stopForeground": red,
+			// Debug toolbar icon for disconnect.
+			"debugIcon.disconnectForeground": red,
+			// Debug toolbar icon for restart.
+			"debugIcon.restartForeground": blue,
+			// Debug toolbar icon for step over.
+			"debugIcon.stepOverForeground": blue,
+			// Debug toolbar icon for step into.
+			"debugIcon.stepIntoForeground": blue,
+			// Debug toolbar icon for step over.
+			"debugIcon.stepOutForeground": blue,
+			// Debug toolbar icon for continue.
+			"debugIcon.continueForeground": green,
+			// Debug toolbar icon for step back
+			"debugIcon.stepBackForeground": orange,
+
 			"terminal.foreground": white,
 			"terminal.background": black,
 			"terminal.border": faint,
@@ -419,6 +470,10 @@ export function generateTheme() {
 			"settings.textInputBackground": black,
 			"settings.textInputBorder": black,
 			"settings.textInputForeground": white,
+			"settings.focusedRowBackground": black,
+			"settings.focusedRowBorder": faint,
+			"settings.headerBorder": faint,
+			"settings.sashBorder": highlight,
 
 			"breadcrumb.activeSelectionForeground": white,
 			"breadcrumb.focusForeground": gray[9],
@@ -1012,4 +1067,26 @@ export function generateTheme() {
 			},
 		],
 	};
+
+	let overrides: Record<string, Record<string, string>> = {};
+	if (variant === "light") {
+		overrides = {
+			colors: {
+				"badge.background": purple,
+				"activityBarBadge.background": purple,
+			},
+		};
+	}
+
+	const overrideKeys = Object.keys(overrides);
+	if (overrideKeys.length > 0) {
+		return overrideKeys.reduce((themeObj, key) => {
+			// @ts-ignore
+			themeObj[key] = { ...themeObj[key], ...overrides[key] };
+
+			return themeObj;
+		}, themeConfig);
+	}
+
+	return themeConfig;
 }

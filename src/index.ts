@@ -3,12 +3,17 @@ import { generateTheme } from "./generateTheme";
 
 const DIR = "./themes";
 
-const theme = generateTheme();
+const defaultTheme = generateTheme();
+const lightTheme = generateTheme("light");
 
 fs.mkdir(DIR, { recursive: true })
 	.then(() =>
 		Promise.all([
-			fs.writeFile(`${DIR}/default.json`, JSON.stringify(theme, null, 2)),
+			fs.writeFile(
+				`${DIR}/default.json`,
+				JSON.stringify(defaultTheme, null, 2),
+			),
+			fs.writeFile(`${DIR}/light.json`, JSON.stringify(lightTheme, null, 2)),
 		]),
 	)
 	.then(() => {
