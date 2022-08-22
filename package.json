@@ -7,7 +7,7 @@
 	"author": "Sreetam Das",
 	"license": "MIT",
 	"galleryBanner": {
-		"color": "#1b1f23",
+		"color": "#0A0E14",
 		"theme": "dark"
 	},
 	"icon": "logo.png",
@@ -16,6 +16,7 @@
 		"dev": "pnpm run start",
 		"build": "rimraf ./dist && tsup",
 		"prepublishOnly": "npm run build",
+		"package": "vsce package",
 		"release": "vsce publish"
 	},
 	"repository": {
@@ -30,14 +31,14 @@
 	"contributes": {
 		"themes": [
 			{
+				"label": "Karma Light",
+				"uiTheme": "vs",
+				"path": "./themes/light.json"
+			},
+			{
 				"label": "Karma v3",
 				"uiTheme": "vs-dark",
 				"path": "./themes/default.json"
-			},
-			{
-				"label": "Karma Light",
-				"uiTheme": "vs",
-				"path": "./themes/Karma-light-color-theme.json"
 			},
 			{
 				"label": "Karma ",
