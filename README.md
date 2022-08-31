@@ -31,9 +31,41 @@ A colorful mix of [Ayu](https://marketplace.visualstudio.com/items?itemName=teab
 <br />
 <br />
 
-## Credits
+## Recommended setup
 
-_Karma_ is inspired by a mix of [Ayu](https://marketplace.visualstudio.com/items?itemName=teabyii.ayu), Lucy and [Andromeda](https://marketplace.visualstudio.com/items?itemName=EliverLara.andromeda) themes. In addition, while starting work on the v3 release and on the lookout for a way to generate complimentary themes with tokens, I took heavy inspiration from [GitHub's VS Code themes](https://github.com/primer/github-vscode-theme).
+For the best, recommended experience use the following:
+
+- [Iosevka font](https://typeof.net/Iosevka/)
+- with the settings (you can paste these in your `settings.json`):
+
+  ```json
+  {
+  	"breadcrumbs.enabled": true,
+  	"editor.bracketPairColorization.enabled": true,
+  	"editor.cursorStyle": "block",
+  	"editor.fontFamily": "'Iosevka', monospace",
+  	"editor.fontLigatures": true,
+  	"editor.fontSize": 13,
+  	"editor.guides.bracketPairs": true,
+  	"editor.guides.bracketPairsHorizontal": "active",
+  	"editor.minimap.enabled": false, // disable minimap
+  	"editor.renderLineHighlight": "all",
+  	"git.mergeEditor": false,
+  	"terminal.integrated.fontFamily": "'Iosevka Term'",
+  	"terminal.integrated.fontSize": 13,
+  	"workbench.activityBar.visible": false, // hide activity bar
+  	"workbench.colorCustomizations": {
+  		"[Karma]": {
+  			"editorLineNumber.foreground": "#333333"
+  		}
+  	},
+  	"workbench.colorTheme": "Karma",
+  	"workbench.panel.defaultLocation": "right", // place the default panel (terminal etc.) on the right
+  	"workbench.settings.editor": "json",
+  	"workbench.sideBar.location": "right", // place the sidebar on the right
+  	"terminal.integrated.minimumContrastRatio": 1 // on certain themes, the color gets altered by VS Code for contrast, disable this to use Karma colors
+  }
+  ```
 
 ## Overrides
 
@@ -51,6 +83,6 @@ To override this theme in your personal config file, please follow the guide in 
 },
 ```
 
-## Other info
+## Credits
 
-_font in screenshot:_ [_Dank Mono_](https://dank.sh)
+_Karma_ is inspired by a mix of [Ayu](https://marketplace.visualstudio.com/items?itemName=teabyii.ayu), Lucy and [Andromeda](https://marketplace.visualstudio.com/items?itemName=EliverLara.andromeda) themes. In addition, while starting work on the v3 release and on the lookout for a way to generate complimentary themes with tokens, I took heavy inspiration from [GitHub's VS Code themes](https://github.com/primer/github-vscode-theme).
