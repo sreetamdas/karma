@@ -35,13 +35,6 @@ export const KARMA = {
 		19: "#fc618d19",
 		20: "#fc618d26",
 	},
-	faints: {
-		red: "#FC618D60",
-		green: "#7bd88f60",
-		blue: "#5AD4E660",
-		purple: "#a76efd60",
-		yellow: "#fce56660",
-	},
 	greens: {
 		100: "#7bd88f19",
 		200: "#7bd88f26",
@@ -86,13 +79,6 @@ export const KARMA_LIGHT = {
 		18: "#f7f1ffDD",
 		19: "#fc618d19",
 		20: "#fc618d26",
-	},
-	faints: {
-		red: "#FC618D50",
-		green: "#2D972F60",
-		blue: "#1a98ab60",
-		purple: "#6F42C160",
-		yellow: "#EEAE1160",
 	},
 	greens: {
 		100: "#7bd88f19",

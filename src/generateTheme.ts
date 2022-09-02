@@ -3,6 +3,7 @@
  * @see https://code.visualstudio.com/api/references/theme-color
  */
 
+import { opacity } from "./helpers";
 import { KARMA, KARMA_LIGHT } from "./tokens";
 
 export type KarmaVariant = "default" | "light";
@@ -31,7 +32,6 @@ export function generateTheme(variant: KarmaVariant = "default") {
 		yellow2,
 		faint,
 		gray,
-		faints,
 		greens,
 	} = theme;
 
@@ -56,7 +56,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			property: { foreground: gray[10] },
 		},
 		colors: {
-			focusBorder: background,
+			focusBorder: faint,
 			foreground: primary,
 			descriptionForeground: gray[7],
 			errorForeground: red,
@@ -81,7 +81,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"button.secondaryHoverBackground": faint,
 
 			"checkbox.background": background,
-			"checkbox.border": faints.purple,
+			"checkbox.border": opacity(purple, 120),
 
 			"dropdown.background": background,
 			"dropdown.border": background,
@@ -92,9 +92,9 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"input.border": faint,
 			"input.foreground": primary,
 			"input.placeholderForeground": gray[6],
-			"inputOption.activeForeground": background,
-			"inputOption.activeBackground": green,
-			"inputOption.activeBorder": green,
+			"inputOption.activeForeground": primary,
+			"inputOption.activeBackground": gray[4],
+			"inputOption.activeBorder": gray[4],
 			"inputValidation.errorBackground": background,
 			"inputValidation.errorBorder": red,
 			"inputValidation.errorForeground": red,
@@ -248,7 +248,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"editorGutter.modifiedBackground": orange,
 			"editorGutter.deletedBackground": red,
 
-			"diffEditor.insertedTextBackground": faints.green,
+			"diffEditor.insertedTextBackground": opacity(green, 96),
 			"diffEditor.insertedTextBorder": background,
 			"diffEditor.removedTextBackground": gray[19],
 			"diffEditor.removedTextBorder": background,
@@ -290,11 +290,11 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"merge.currentHeaderBackground": gray[20],
 			"merge.incomingContentBackground": greens[100],
 			"merge.incomingHeaderBackground": greens[200],
-			"mergeEditor.change.background": red,
+			"mergeEditor.change.background": gray[15],
+			"mergeEditor.change.word.background": gray[18],
 			"mergeEditor.conflict.handledFocused.border": yellow,
 			"mergeEditor.conflict.handled.minimapOverViewRuler": yellow,
 			"mergeEditor.conflict.unHandled.minimapOverViewRuler": red,
-			// TODO merge editor
 
 			"panel.background": background,
 			"panel.border": background,
@@ -389,7 +389,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			// Icon color for breakpoints.
 			"debugIcon.breakpointForeground": red,
 			// Icon color for disabled breakpoints.
-			"debugIcon.breakpointDisabledForeground": faints.red,
+			"debugIcon.breakpointDisabledForeground": opacity(red, 96),
 			// Icon color for unverified breakpoints.
 			"debugIcon.breakpointUnverifiedForeground": orange,
 			// Icon color for the current breakpoint stack frame.
@@ -1072,8 +1072,10 @@ export function generateTheme(variant: KarmaVariant = "default") {
 	if (variant === "light") {
 		overrides = {
 			colors: {
-				"badge.background": purple,
-				"activityBarBadge.background": purple,
+				// "badge.background": purple,
+				"badge.foreground": primary,
+				// "activityBarBadge.background": purple,
+				"activityBarBadge.foreground": primary,
 			},
 		};
 	}
