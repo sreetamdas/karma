@@ -3,7 +3,7 @@
  * @see https://code.visualstudio.com/api/references/theme-color
  */
 
-import { opacity } from "./helpers";
+import { opacity, tokenThemeMap } from "./helpers";
 import { KARMA, KARMA_LIGHT } from "./tokens";
 
 export type KarmaVariant = "default" | "light";
@@ -29,10 +29,9 @@ export function generateTheme(variant: KarmaVariant = "default") {
 		highlight2,
 		red,
 		yellow,
-		yellow2,
+		yellowButDarker,
 		faint,
 		gray,
-		greens,
 	} = theme;
 
 	const themeConfig = {
@@ -81,7 +80,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"button.secondaryHoverBackground": faint,
 
 			"checkbox.background": background,
-			"checkbox.border": opacity(purple, 120),
+			"checkbox.border": opacity(purple, 128),
 
 			"dropdown.background": background,
 			"dropdown.border": background,
@@ -93,8 +92,20 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"input.foreground": primary,
 			"input.placeholderForeground": gray[6],
 			"inputOption.activeForeground": primary,
-			"inputOption.activeBackground": gray[4],
-			"inputOption.activeBorder": gray[4],
+			"inputOption.activeBackground": tokenThemeMap(
+				{
+					default: gray[4],
+					light: opacity(purple, 64),
+				},
+				variant,
+			),
+			"inputOption.activeBorder": tokenThemeMap(
+				{
+					default: gray[4],
+					light: opacity(purple, 64),
+				},
+				variant,
+			),
 			"inputValidation.errorBackground": background,
 			"inputValidation.errorBorder": red,
 			"inputValidation.errorForeground": red,
@@ -110,36 +121,89 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"scrollbarSlider.hoverBackground": gray[17],
 			"scrollbarSlider.activeBackground": gray[18],
 
-			"badge.foreground": background,
-			"badge.background": yellow,
+			"badge.foreground": tokenThemeMap(
+				{ default: background, light: background },
+				variant,
+			),
+			"badge.background": tokenThemeMap(
+				{ default: yellow, light: highlight },
+				variant,
+			),
 
 			"progressBar.background": highlight2,
 
+			// List/Tree background color for the selected item when the list/tree is active.
 			"list.activeSelectionBackground": background,
-			"list.activeSelectionForeground": yellow,
+			// List/Tree foreground color for the selected item when the list/tree is active.
+			// TODO revert
+			"list.activeSelectionForeground": tokenThemeMap(
+				{ default: yellow, light: purple },
+				variant,
+			),
+			// List/Tree icon foreground color for the selected item when the list/tree is active. An active list/tree has keyboard focus, an inactive does not.
+			"list.activeSelectionIconForeground": primary,
+			// List/Tree drag and drop background when moving items around using the mouse.
 			"list.dropBackground": faint,
-			"list.errorForeground": red,
+			// List/Tree background color for the focused item when the list/tree is active.
 			"list.focusBackground": background,
+			// List/Tree foreground color for the focused item when the list/tree is active. An active list/tree has keyboard focus, an inactive does not.
 			"list.focusForeground": primary,
+			// List/Tree foreground color of the match highlights on actively focused items when searching inside the list/tree.
+			"list.focusHighlightForeground": purple,
+			// List/Tree outline color for the focused item when the list/tree is active. An active list/tree has keyboard focus, an inactive does not.
+			"list.focusOutline": faint,
+			// List/Tree outline color for the focused item when the list/tree is active and selected. An active list/tree has keyboard focus, an inactive does not.
+			"list.focusAndSelectionOutline": faint,
+			// List/Tree foreground color of the match highlights when searching inside the list/tree.
 			"list.highlightForeground": primary,
+			// List/Tree background when hovering over items using the mouse.
 			"list.hoverBackground": background,
+			// List/Tree foreground when hovering over items using the mouse.
 			"list.hoverForeground": primary,
-			"list.inactiveFocusBackground": background,
+			// List/Tree background color for the selected item when the list/tree is inactive.
 			"list.inactiveSelectionBackground": background,
-			"list.inactiveSelectionForeground": yellow,
-			"list.invalidItemForeground": red,
-			"list.warningForeground": orange,
-			"listFilterWidget.background": background,
-			"listFilterWidget.noMatchesOutline": red,
-			"listFilterWidget.outline": background,
+			// List/Tree foreground color for the selected item when the list/tree is inactive. An active list/tree has keyboard focus, an inactive does not.
+			"list.inactiveSelectionForeground": tokenThemeMap(
+				{
+					default: yellow,
+					light: purple,
+				},
+				variant,
+			),
+			// List/Tree icon foreground color for the selected item when the list/tree is inactive. An active list/tree has keyboard focus, an inactive does not.
+			"list.inactiveSelectionIconForeground": faint,
+			// List background color for the focused item when the list is inactive. An active list has keyboard focus, an inactive does not. Currently only supported in lists.
+			"list.inactiveFocusBackground": background,
 
+			// List/Tree outline color for the focused item when the list/tree is inactive. An active list/tree has keyboard focus, an inactive does not.
+			"list.inactiveFocusOutline": faint,
+			// List/Tree foreground color for invalid items, for example an unresolved root in explorer.
+			"list.invalidItemForeground": red,
+			// Foreground color of list items containing errors.
+			"list.errorForeground": red,
+			// Foreground color of list items containing warnings.
+			"list.warningForeground": orange,
+			// List/Tree Filter background color of typed text when searching inside the list/tree.
+			"listFilterWidget.background": background,
+			// List/Tree Filter Widget's outline color of typed text when searching inside the list/tree.
+			"listFilterWidget.outline": background,
+			// List/Tree Filter Widget's outline color when no match is found of typed text when searching inside the list/tree.
+			"listFilterWidget.noMatchesOutline": red,
+
+			// Activity Bar
 			"activityBar.foreground": gray[9],
 			"activityBar.inactiveForeground": gray[4],
 			"activityBar.background": background,
 			"activityBar.activeBorder": yellow,
 			"activityBar.border": background,
-			"activityBarBadge.foreground": background,
-			"activityBarBadge.background": yellow,
+			"activityBarBadge.foreground": tokenThemeMap(
+				{ default: background, light: background },
+				variant,
+			),
+			"activityBarBadge.background": tokenThemeMap(
+				{ default: yellow, light: highlight },
+				variant,
+			),
 
 			"sideBar.foreground": gray[7],
 			"sideBar.background": background,
@@ -161,9 +225,18 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"editorGroupHeader.tabsBackground": background,
 			"editorGroupHeader.tabsBorder": background,
 
-			"tab.activeBorder": yellow,
-			"tab.activeBackground": background,
-			"tab.activeForeground": yellow,
+			"tab.activeBorder": tokenThemeMap(
+				{ default: yellow, light: highlight },
+				variant,
+			),
+			"tab.activeBackground": tokenThemeMap(
+				{ default: background, light: gray[14] },
+				variant,
+			),
+			"tab.activeForeground": tokenThemeMap(
+				{ default: yellow, light: highlight },
+				variant,
+			),
 			"tab.activeModifiedBorder": gray[4],
 			"tab.border": background,
 			"tab.hoverBackground": background,
@@ -260,7 +333,13 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"editorSuggestWidget.border": background,
 			"editorSuggestWidget.foreground": gray[9],
 			"editorSuggestWidget.highlightForeground": primary,
-			"editorSuggestWidget.selectedBackground": gray[6],
+			"editorSuggestWidget.selectedBackground": tokenThemeMap(
+				{
+					default: gray[6],
+					light: gray[15],
+				},
+				variant,
+			),
 			"editorHoverWidget.background": background,
 			"editorHoverWidget.border": faint,
 
@@ -269,18 +348,54 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"editorMarkerNavigationInfo.background": blue,
 			"editorMarkerNavigationWarning.background": orange,
 
+			/**
+			 * Peek view
+			 */
+			// Color of the peek view borders and arrow.
 			"peekView.border": faint,
+			// Background color of the peek view editor.
 			"peekViewEditor.background": background,
-			"peekViewEditor.matchHighlightBackground": gray[4],
+			// Background color of the gutter in the peek view editor.
 			"peekViewEditorGutter.background": background,
+			// Match highlight color in the peek view editor.
+			"peekViewEditor.matchHighlightBackground": tokenThemeMap(
+				{
+					default: gray[4],
+					light: opacity(green, 32),
+				},
+				variant,
+			),
+			// Match highlight border color in the peek view editor.
+			// "peekViewEditor.matchHighlightBorder": background,
+			// Background color of the peek view result list.
 			"peekViewResult.background": background,
+			// Foreground color for file nodes in the peek view result list.
 			"peekViewResult.fileForeground": gray[7],
+			// Foreground color for line nodes in the peek view result list.
 			"peekViewResult.lineForeground": gray[7],
-			"peekViewResult.matchHighlightBackground": gray[4],
+			// Match highlight color in the peek view result list.
+			"peekViewResult.matchHighlightBackground": tokenThemeMap(
+				{
+					default: gray[4],
+					light: opacity(green, 32),
+				},
+				variant,
+			),
+			// Background color of the selected entry in the peek view result list.
 			"peekViewResult.selectionBackground": background,
-			"peekViewResult.selectionForeground": primary,
+			// Foreground color of the selected entry in the peek view result list.
+			"peekViewResult.selectionForeground": tokenThemeMap(
+				{
+					default: primary,
+					light: purple,
+				},
+				variant,
+			),
+			// Background color of the peek view title area.
 			"peekViewTitle.background": background,
+			// Color of the peek view title info.
 			"peekViewTitleDescription.foreground": gray[7],
+			// Color of the peek view title.
 			"peekViewTitleLabel.foreground": primary,
 
 			"merge.border": faint,
@@ -288,12 +403,29 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"merge.commonHeaderBackground": gray[18],
 			"merge.currentContentBackground": gray[19],
 			"merge.currentHeaderBackground": gray[20],
-			"merge.incomingContentBackground": greens[100],
-			"merge.incomingHeaderBackground": greens[200],
+			"merge.incomingContentBackground": opacity(green, 32),
+			"merge.incomingHeaderBackground": opacity(green, 48),
+			//The background color for changes.
 			"mergeEditor.change.background": gray[15],
-			"mergeEditor.change.word.background": gray[18],
-			"mergeEditor.conflict.handledFocused.border": yellow,
+			//The background color for word changes.
+			"mergeEditor.change.word.background": tokenThemeMap(
+				{
+					default: gray[18],
+					light: opacity(green, 48),
+				},
+				variant,
+			),
+			//The border color of unhandled unfocused conflicts.
+			"mergeEditor.conflict.unhandledUnfocused.border": opacity(orange, 128),
+			//The border color of unhandled focused conflicts.
+			"mergeEditor.conflict.unhandledFocused.border": orange,
+			//The border color of handled unfocused conflicts.
+			"mergeEditor.conflict.handledUnfocused.border": opacity(yellow, 128),
+			//The border color of handled focused conflicts.
+			"mergeEditor.conflict.handledFocused.border": yellowButDarker,
+			//The foreground color for changes in input 1.
 			"mergeEditor.conflict.handled.minimapOverViewRuler": yellow,
+			//The foreground color for changes in input 1.
 			"mergeEditor.conflict.unHandled.minimapOverViewRuler": red,
 
 			"panel.background": background,
@@ -346,7 +478,24 @@ export function generateTheme(variant: KarmaVariant = "default") {
 
 			"pickerGroup.border": background,
 			"pickerGroup.foreground": gray[4],
-			"quickInputList.focusBackground": gray[15],
+			// Quick picker background color for the focused item.
+			"quickInputList.focusBackground": tokenThemeMap(
+				{
+					default: gray[15],
+					light: opacity(faint, 100),
+				},
+				variant,
+			),
+			// Quick picker foreground color for the focused item.
+			"quickInputList.focusForeground": tokenThemeMap(
+				{
+					default: yellow,
+					light: purple,
+				},
+				variant,
+			),
+			// Quick picker icon foreground color for the focused item.
+			// "quickInputList.focusIconForeground": primary,
 
 			"keybindingLabel.background": gray[16],
 			"keybindingLabel.foreground": gray[10],
@@ -568,11 +717,11 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			},
 			{
 				scope: "constant.numeric.line-number.match.find-in-files",
-				settings: { foreground: yellow2 },
+				settings: { foreground: yellowButDarker },
 			},
 			{
 				scope: "entity.name.section",
-				settings: { foreground: yellow2 },
+				settings: { foreground: yellowButDarker },
 			},
 			{ scope: "entity.name", settings: { foreground: green } },
 			{
@@ -656,7 +805,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			},
 			{ scope: "markup.italic", settings: { fontStyle: "italic" } },
 			{ scope: "markup.bold", settings: { fontStyle: "bold" } },
-			{ scope: "markup.heading", settings: { foreground: yellow2 } },
+			{ scope: "markup.heading", settings: { foreground: yellowButDarker } },
 			{ scope: "markup.raw", settings: { foreground: orange } },
 			{
 				scope: "markup.underline",
@@ -868,7 +1017,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			{ scope: "region.orangish", settings: { foreground: orange } },
 			{
 				scope: "region.yellowish",
-				settings: { foreground: yellow2 },
+				settings: { foreground: yellowButDarker },
 			},
 			{ scope: "region.greenish", settings: { foreground: green } },
 			{ scope: "region.bluish", settings: { foreground: blue } },
@@ -952,7 +1101,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 				scope: ["storage.modifier.package", "storage.modifier.import"],
 				settings: { foreground: gray[10] },
 			},
-			{ scope: "string", settings: { foreground: yellow2 } },
+			{ scope: "string", settings: { foreground: yellowButDarker } },
 			{
 				scope: "string.unquoted.label",
 				settings: { foreground: gray[10] },
@@ -1067,28 +1216,6 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			},
 		],
 	};
-
-	let overrides: Record<string, Record<string, string>> = {};
-	if (variant === "light") {
-		overrides = {
-			colors: {
-				// "badge.background": purple,
-				"badge.foreground": primary,
-				// "activityBarBadge.background": purple,
-				"activityBarBadge.foreground": primary,
-			},
-		};
-	}
-
-	const overrideKeys = Object.keys(overrides);
-	if (overrideKeys.length > 0) {
-		return overrideKeys.reduce((themeObj, key) => {
-			// @ts-ignore
-			themeObj[key] = { ...themeObj[key], ...overrides[key] };
-
-			return themeObj;
-		}, themeConfig);
-	}
 
 	return themeConfig;
 }

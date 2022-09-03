@@ -10,7 +10,7 @@ export const KARMA = {
 	highlight2: "#a76efd80",
 	red: "#FC618D",
 	yellow: "#fce566",
-	yellow2: "#E3CF65",
+	yellowButDarker: "#E3CF65",
 	faint: "#1c2025",
 
 	gray: {
@@ -35,10 +35,6 @@ export const KARMA = {
 		19: "#fc618d19",
 		20: "#fc618d26",
 	},
-	greens: {
-		100: "#7bd88f19",
-		200: "#7bd88f26",
-	},
 } as const;
 
 export const KARMA_LIGHT = {
@@ -54,8 +50,7 @@ export const KARMA_LIGHT = {
 	highlight2: "#a76efd80",
 	red: "#FC618D",
 	yellow: "#EEAE11",
-	// yellow2: "#EBAB14",
-	yellow2: "#FFAA33",
+	yellowButDarker: "#FFAA33",
 	faint: "#EEEEEE",
 
 	gray: {
@@ -79,9 +74,5 @@ export const KARMA_LIGHT = {
 		18: "#f7f1ffDD",
 		19: "#fc618d19",
 		20: "#fc618d26",
-	},
-	greens: {
-		100: "#7bd88f19",
-		200: "#7bd88f26",
 	},
 } as const;
