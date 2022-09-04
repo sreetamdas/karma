@@ -10,7 +10,7 @@
 		"color": "#0A0E14",
 		"theme": "dark"
 	},
-	"icon": "logo.png",
+	"icon": "images/logo.png",
 	"scripts": {
 		"start": "tsx watch src/index.ts",
 		"dev": "pnpm run start",
