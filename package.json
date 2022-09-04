@@ -31,14 +31,14 @@
 	"contributes": {
 		"themes": [
 			{
-				"label": "Karma Light",
-				"uiTheme": "vs",
-				"path": "./themes/light.json"
-			},
-			{
 				"label": "Karma v3",
 				"uiTheme": "vs-dark",
 				"path": "./themes/default.json"
+			},
+			{
+				"label": "Karma Light",
+				"uiTheme": "vs",
+				"path": "./themes/light.json"
 			},
 			{
 				"label": "Karma ",
