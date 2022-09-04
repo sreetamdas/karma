@@ -60,7 +60,10 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			descriptionForeground: gray[7],
 			errorForeground: red,
 
-			"textLink.foreground": yellow,
+			"textLink.foreground": tokenThemeMap(
+				{ default: yellow, light: highlight },
+				variant,
+			),
 			"textLink.activeForeground": primary,
 			"textBlockQuote.background": background,
 			"textBlockQuote.border": faint,
@@ -190,17 +193,41 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			// List/Tree Filter Widget's outline color when no match is found of typed text when searching inside the list/tree.
 			"listFilterWidget.noMatchesOutline": red,
 
-			// Activity Bar
-			"activityBar.foreground": gray[9],
-			"activityBar.inactiveForeground": gray[4],
+			/**
+			 * Activity Bar
+			 */
+			// Activity Bar background color.
 			"activityBar.background": background,
-			"activityBar.activeBorder": yellow,
+			// Drag and drop feedback color for the activity bar items. The activity bar is showing on the far left or right and allows to switch between views of the side bar.
+			"activityBar.dropBorder": tokenThemeMap(
+				{ default: yellow, light: highlight },
+				variant,
+			),
+			// Activity Bar foreground color (for example used for the icons).
+			"activityBar.foreground": gray[9],
+			// Activity Bar item foreground color when it is inactive.
+			"activityBar.inactiveForeground": gray[4],
+			// Activity Bar border color with the Side Bar.
 			"activityBar.border": background,
+			// Activity notification badge background color.
+			"activityBarBadge.background": tokenThemeMap(
+				{ default: yellow, light: highlight },
+				variant,
+			),
+			// Activity notification badge foreground color.
 			"activityBarBadge.foreground": tokenThemeMap(
 				{ default: background, light: background },
 				variant,
 			),
-			"activityBarBadge.background": tokenThemeMap(
+			// Activity Bar active indicator border color.
+			"activityBar.activeBorder": tokenThemeMap(
+				{ default: yellow, light: highlight },
+				variant,
+			),
+			// Activity Bar optional background color for the active element.
+			"activityBar.activeBackground": background,
+			// Activity bar focus border color for the active item.
+			"activityBar.activeFocusBorder": tokenThemeMap(
 				{ default: yellow, light: highlight },
 				variant,
 			),
@@ -230,7 +257,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 				variant,
 			),
 			"tab.activeBackground": tokenThemeMap(
-				{ default: background, light: gray[14] },
+				{ default: background, light: background },
 				variant,
 			),
 			"tab.activeForeground": tokenThemeMap(
@@ -386,7 +413,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			// Foreground color of the selected entry in the peek view result list.
 			"peekViewResult.selectionForeground": tokenThemeMap(
 				{
-					default: primary,
+					default: yellow,
 					light: purple,
 				},
 				variant,
@@ -430,14 +457,23 @@ export function generateTheme(variant: KarmaVariant = "default") {
 
 			"panel.background": background,
 			"panel.border": background,
-			"panel.dropBorder": yellow,
+			"panel.dropBorder": tokenThemeMap(
+				{ default: yellow, light: highlight },
+				variant,
+			),
 			"panelInput.border": background,
 			"panelSection.border": background,
 			"panelSection.dropBackground": gray[14],
 			"panelSectionHeader.background": background,
 			"panelSectionHeader.foreground": gray[7],
-			"panelTitle.activeBorder": yellow,
-			"panelTitle.activeForeground": yellow,
+			"panelTitle.activeBorder": tokenThemeMap(
+				{ default: yellow, light: highlight },
+				variant,
+			),
+			"panelTitle.activeForeground": tokenThemeMap(
+				{ default: yellow, light: highlight },
+				variant,
+			),
 			"panelTitle.inactiveForeground": gray[6],
 
 			"statusBar.foreground": gray[6],
@@ -463,7 +499,10 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"notificationCenter.border": faint,
 			"notificationCenterHeader.background": background,
 			"notificationCenterHeader.foreground": gray[7],
-			"notificationLink.foreground": yellow,
+			"notificationLink.foreground": tokenThemeMap(
+				{ default: yellow, light: highlight },
+				variant,
+			),
 			"notifications.background": background,
 			"notifications.border": background,
 			"notifications.foreground": gray[9],
@@ -611,8 +650,14 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"settings.dropdownBorder": background,
 			"settings.dropdownForeground": primary,
 			"settings.dropdownListBorder": gray[7],
-			"settings.headerForeground": yellow,
-			"settings.modifiedItemIndicator": yellow,
+			"settings.headerForeground": tokenThemeMap(
+				{ default: yellow, light: highlight },
+				variant,
+			),
+			"settings.modifiedItemIndicator": tokenThemeMap(
+				{ default: yellow, light: highlight },
+				variant,
+			),
 			"settings.numberInputBackground": background,
 			"settings.numberInputBorder": background,
 			"settings.numberInputForeground": primary,
