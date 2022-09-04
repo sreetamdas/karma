@@ -21,6 +21,8 @@ export function generateTheme(variant: KarmaVariant = "default") {
 	const {
 		background,
 		primary,
+		transparent,
+
 		blue,
 		green,
 		orange,
@@ -348,10 +350,10 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"editorGutter.modifiedBackground": orange,
 			"editorGutter.deletedBackground": red,
 
-			"diffEditor.insertedTextBackground": opacity(green, 96),
-			"diffEditor.insertedTextBorder": background,
+			"diffEditor.insertedTextBackground": opacity(green, 32),
+			"diffEditor.insertedTextBorder": transparent,
 			"diffEditor.removedTextBackground": gray[19],
-			"diffEditor.removedTextBorder": background,
+			"diffEditor.removedTextBorder": transparent,
 			"tree.indentGuidesStroke": faint,
 
 			"editorWidget.background": background,

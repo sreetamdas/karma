@@ -1,6 +1,7 @@
 export const KARMA = {
 	background: "#0A0E14",
 	primary: "#F7F1FF",
+	transparent: "#00000000",
 
 	blue: "#5AD4E6",
 	green: "#7BD88F",
@@ -40,6 +41,7 @@ export const KARMA = {
 export const KARMA_LIGHT = {
 	background: "#FFFFFF",
 	primary: "#0A0E14",
+	transparent: "#00000000",
 
 	blue: "#1a98ab",
 	green: "#2D972F",
