@@ -293,6 +293,11 @@ export function generateTheme(variant: KarmaVariant = "default") {
 
 			"editor.findMatchBackground": gray[18],
 			"editor.findMatchHighlightBackground": gray[18],
+			"editor.findRangeHighlightBackground": gray[14],
+			"editor.findMatchBorder": yellow,
+			"editor.findMatchHighlightBorder": transparent,
+			"editor.findRangeHighlightBorder": transparent,
+
 			"editor.linkedEditingBackground": faint,
 			"editor.inactiveSelectionBackground": gray[17],
 			"editor.selectionBackground": gray[16],
