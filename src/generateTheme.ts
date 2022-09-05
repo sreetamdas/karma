@@ -140,7 +140,6 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			// List/Tree background color for the selected item when the list/tree is active.
 			"list.activeSelectionBackground": background,
 			// List/Tree foreground color for the selected item when the list/tree is active.
-			// TODO revert
 			"list.activeSelectionForeground": tokenThemeMap(
 				{ default: yellow, light: purple },
 				variant,
@@ -154,7 +153,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			// List/Tree foreground color for the focused item when the list/tree is active. An active list/tree has keyboard focus, an inactive does not.
 			"list.focusForeground": primary,
 			// List/Tree foreground color of the match highlights on actively focused items when searching inside the list/tree.
-			"list.focusHighlightForeground": purple,
+			"list.focusHighlightForeground": green,
 			// List/Tree outline color for the focused item when the list/tree is active. An active list/tree has keyboard focus, an inactive does not.
 			"list.focusOutline": faint,
 			// List/Tree outline color for the focused item when the list/tree is active and selected. An active list/tree has keyboard focus, an inactive does not.
@@ -176,12 +175,11 @@ export function generateTheme(variant: KarmaVariant = "default") {
 				variant,
 			),
 			// List/Tree icon foreground color for the selected item when the list/tree is inactive. An active list/tree has keyboard focus, an inactive does not.
-			"list.inactiveSelectionIconForeground": faint,
+			"list.inactiveSelectionIconForeground": gray[7],
 			// List background color for the focused item when the list is inactive. An active list has keyboard focus, an inactive does not. Currently only supported in lists.
 			"list.inactiveFocusBackground": background,
-
 			// List/Tree outline color for the focused item when the list/tree is inactive. An active list/tree has keyboard focus, an inactive does not.
-			"list.inactiveFocusOutline": faint,
+			"list.inactiveFocusOutline": background,
 			// List/Tree foreground color for invalid items, for example an unresolved root in explorer.
 			"list.invalidItemForeground": red,
 			// Foreground color of list items containing errors.
@@ -282,9 +280,6 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"tab.unfocusedInactiveForeground": gray[7],
 			"tab.unfocusedInactiveModifiedBorder": background,
 			"editorPane.background": background,
-			// TODO fix this for 3-way merge editor
-			// "sideBySideEditor.horizontalBorder": red,
-			// "sideBySideEditor.verticalBorder": red,
 
 			"editor.foreground": primary,
 			"editor.background": background,
@@ -369,7 +364,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"editorSuggestWidget.highlightForeground": primary,
 			"editorSuggestWidget.selectedBackground": tokenThemeMap(
 				{
-					default: gray[6],
+					default: gray[16],
 					light: gray[15],
 				},
 				variant,
@@ -611,6 +606,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"debugIcon.continueForeground": green,
 			// Debug toolbar icon for step back
 			"debugIcon.stepBackForeground": orange,
+			"debugToolBar.background": faint,
 
 			"terminal.foreground": primary,
 			"terminal.background": background,
