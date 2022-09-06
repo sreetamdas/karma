@@ -346,6 +346,7 @@
     "debugIcon.continueForeground": "#7BD88F",
     "debugIcon.stepBackForeground": "#FD9353",
     "debugToolBar.background": "#1c2025",
+    "debugToolBar.border": "#0A0E14",
     "terminal.foreground": "#F7F1FF",
     "terminal.background": "#0A0E14",
     "terminal.border": "#1c2025",

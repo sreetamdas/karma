@@ -606,7 +606,14 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"debugIcon.continueForeground": green,
 			// Debug toolbar icon for step back
 			"debugIcon.stepBackForeground": orange,
-			"debugToolBar.background": faint,
+			"debugToolBar.background": tokenThemeMap(
+				{ default: faint, light: background },
+				variant,
+			),
+			"debugToolBar.border": tokenThemeMap(
+				{ default: background, light: faint },
+				variant,
+			),
 
 			"terminal.foreground": primary,
 			"terminal.background": background,
