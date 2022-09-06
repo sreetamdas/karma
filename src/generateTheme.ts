@@ -285,6 +285,11 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"editor.background": background,
 			"editorLineNumber.foreground": gray[2],
 			"editorLineNumber.activeForeground": highlight,
+			"editorCursor.background": background,
+			"editorCursor.foreground": tokenThemeMap(
+				{ default: primary, light: highlight },
+				variant,
+			),
 
 			"editor.findMatchBackground": gray[18],
 			"editor.findMatchHighlightBackground": gray[18],
@@ -310,6 +315,9 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"editor.selectionHighlightBorder": background,
 			"editor.lineHighlightBorder": background,
 			"selection.background": gray[18],
+
+			"editorLightBulb.foreground": yellow,
+			"editorLightBulbAutoFix.foreground": green,
 
 			"editorIndentGuide.background": faint,
 			"editorWhitespace.foreground": gray[4],
@@ -349,6 +357,20 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"editorGutter.addedBackground": green,
 			"editorGutter.modifiedBackground": orange,
 			"editorGutter.deletedBackground": red,
+
+			"editor.snippetTabstopHighlightBackground": tokenThemeMap(
+				{ default: gray[16], light: gray[18] },
+				variant,
+			),
+			"editor.snippetTabstopHighlightBorder": tokenThemeMap(
+				{ default: gray[6], light: gray[2] },
+				variant,
+			),
+			"editor.snippetFinalTabstopHighlightBackground": tokenThemeMap(
+				{ default: gray[16], light: gray[18] },
+				variant,
+			),
+			"editor.snippetFinalTabstopHighlightBorder": opacity(purple, 32),
 
 			"diffEditor.insertedTextBackground": opacity(green, 32),
 			"diffEditor.insertedTextBorder": transparent,
