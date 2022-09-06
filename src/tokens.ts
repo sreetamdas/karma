@@ -43,7 +43,7 @@ export const KARMA_LIGHT = {
 	primary: "#0A0E14",
 	transparent: "#00000000",
 
-	blue: "#1a98ab",
+	blue: "#5688c7",
 	green: "#2D972F",
 	// orange: "#FD9353",
 	orange: "#FA8D3E",
