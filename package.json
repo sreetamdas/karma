@@ -48,11 +48,7 @@
 		]
 	},
 	"devDependencies": {
-		"@types/chroma-js": "^2.1.4",
-		"@types/color": "^3.0.3",
 		"@types/node": "^18.7.14",
-		"chroma-js": "^2.4.2",
-		"color": "^4.2.3",
 		"tsup": "^6.2.3",
 		"tsx": "^3.9.0",
 		"typescript": "^4.8.2",
