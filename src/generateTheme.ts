@@ -100,14 +100,14 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"inputOption.activeBackground": tokenThemeMap(
 				{
 					default: gray[4],
-					light: opacity(purple, 64),
+					light: opacity(purple, 48),
 				},
 				variant,
 			),
 			"inputOption.activeBorder": tokenThemeMap(
 				{
 					default: gray[4],
-					light: opacity(purple, 64),
+					light: opacity(purple, 48),
 				},
 				variant,
 			),
@@ -122,9 +122,18 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"inputValidation.warningForeground": orange,
 
 			"scrollbar.shadow": background,
-			"scrollbarSlider.background": gray[15],
-			"scrollbarSlider.hoverBackground": gray[17],
-			"scrollbarSlider.activeBackground": gray[18],
+			"scrollbarSlider.background": tokenThemeMap(
+				{ default: gray[15], light: opacity(gray[12], 48) },
+				variant,
+			),
+			"scrollbarSlider.hoverBackground": tokenThemeMap(
+				{ default: gray[17], light: opacity(gray[12], 80) },
+				variant,
+			),
+			"scrollbarSlider.activeBackground": tokenThemeMap(
+				{ default: gray[18], light: opacity(gray[12], 112) },
+				variant,
+			),
 
 			"badge.foreground": tokenThemeMap(
 				{ default: background, light: background },
@@ -240,9 +249,18 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"sideBarSectionHeader.background": background,
 			"sideBarSectionHeader.border": background,
 
-			"minimapSlider.background": gray[15],
-			"minimapSlider.hoverBackground": gray[17],
-			"minimapSlider.activeBackground": gray[18],
+			"minimapSlider.background": tokenThemeMap(
+				{ default: gray[15], light: opacity(gray[12], 48) },
+				variant,
+			),
+			"minimapSlider.hoverBackground": tokenThemeMap(
+				{ default: gray[17], light: opacity(gray[12], 80) },
+				variant,
+			),
+			"minimapSlider.activeBackground": tokenThemeMap(
+				{ default: gray[18], light: opacity(gray[12], 112) },
+				variant,
+			),
 
 			"editorGroup.border": background,
 			"editorGroup.dropBackground": gray[14],
