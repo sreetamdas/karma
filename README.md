@@ -37,7 +37,6 @@ For the best, recommended experience use the following:
 
 - [Iosevka font](https://typeof.net/Iosevka/)
 - with the settings (you can paste these in your `settings.json`):
-
   ```json
   {
   	"breadcrumbs.enabled": true,
@@ -59,6 +58,9 @@ For the best, recommended experience use the following:
   			"editorLineNumber.foreground": "#333333"
   		}
   	},
+  	"window.autoDetectColorScheme": true, // to enable auto theme switch based on OS color scheme
+  	"workbench.preferredDarkColorTheme": "Karma",
+  	"workbench.preferredLightColorTheme": "Karma Light",
   	"workbench.colorTheme": "Karma",
   	"workbench.panel.defaultLocation": "right", // place the default panel (terminal etc.) on the right
   	"workbench.settings.editor": "json",
@@ -66,6 +68,7 @@ For the best, recommended experience use the following:
   	"terminal.integrated.minimumContrastRatio": 1 // on certain themes, the color gets altered by VS Code for contrast, disable this to use Karma colors
   }
   ```
+- if you want the "legacy" Karma theme, it's available as "Karma Legacy" 🙂
 
 ## Overrides
 
