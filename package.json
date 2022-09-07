@@ -2,7 +2,7 @@
 	"name": "karma",
 	"displayName": "Karma",
 	"description": "A colorful VS Code theme",
-	"version": "3.0.0-rc1",
+	"version": "3.0.0-rc2",
 	"publisher": "sreetamd",
 	"author": "Sreetam Das",
 	"license": "MIT",
@@ -31,7 +31,7 @@
 	"contributes": {
 		"themes": [
 			{
-				"label": "Karma v3",
+				"label": "Karma",
 				"uiTheme": "vs-dark",
 				"path": "./themes/default.json"
 			},
@@ -41,7 +41,7 @@
 				"path": "./themes/light.json"
 			},
 			{
-				"label": "Karma ",
+				"label": "Karma Legacy",
 				"uiTheme": "vs-dark",
 				"path": "./themes/Karma-color-theme.json"
 			}
