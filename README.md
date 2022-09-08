@@ -22,8 +22,66 @@ A colorful mix of [Ayu](https://marketplace.visualstudio.com/items?itemName=teab
 
 <details>
 <summary>CSS</summary>
+
 ![Karma theme screenshot for CSS](./images/v3/css.webp)
 ![Karma Light theme screenshot for CSS](./images/v3/css-light.webp)
+
+</details>
+
+<details>
+<summary>Go</summary>
+
+![Karma theme screenshot for Go](./images/v3/golang.webp)
+![Karma Light theme screenshot for Go](./images/v3/golang-light.webp)
+
+</details>
+
+<details>
+<summary>Phoenix</summary>
+
+![Karma theme screenshot for Phoenix](./images/v3/phoenix.webp)
+![Karma Light theme screenshot for Phoenix](./images/v3/phoenix-light.webp)
+
+</details>
+
+<details>
+<summary>Python</summary>
+
+![Karma theme screenshot for Python](./images/v3/python.webp)
+![Karma Light theme screenshot for Python](./images/v3/python-light.webp)
+
+</details>
+
+<details>
+<summary>Rust</summary>
+
+![Karma theme screenshot for Rust](./images/v3/rust.webp)
+![Karma Light theme screenshot for Rust](./images/v3/rust-light.webp)
+
+</details>
+
+<details>
+<summary>Svelte</summary>
+
+![Karma theme screenshot for Svelte](./images/v3/svelte.webp)
+![Karma Light theme screenshot for Svelte](./images/v3/svelte-light.webp)
+
+</details>
+
+<details>
+<summary>TypeScript</summary>
+
+![Karma theme screenshot for TypeScript](./images/v3/typescript.webp)
+![Karma Light theme screenshot for TypeScript](./images/v3/typescript-light.webp)
+
+</details>
+
+<details>
+<summary>Vue</summary>
+
+![Karma theme screenshot for Vue](./images/v3/vue.webp)
+![Karma Light theme screenshot for Vue](./images/v3/vue-light.webp)
+
 </details>
 
 ## Install
