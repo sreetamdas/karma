@@ -31,8 +31,8 @@ A colorful mix of [Ayu](https://marketplace.visualstudio.com/items?itemName=teab
 <details>
 <summary>Go</summary>
 
-![Karma theme screenshot for Go](./images/v3/golang.webp)
-![Karma Light theme screenshot for Go](./images/v3/golang-light.webp)
+![Karma theme screenshot for Go](./images/v3/go.webp)
+![Karma Light theme screenshot for Go](./images/v3/go-light.webp)
 
 </details>
 
