@@ -6,21 +6,25 @@ A colorful mix of [Ayu](https://marketplace.visualstudio.com/items?itemName=teab
 
 ## Examples
 
-### React + TypeScript
+### React
 
-![Karma theme screenshot for React](./images/react.webp)
+![Karma theme screenshot for React](./images/v3/react.webp)
 
-### CSS
-
-![Karma theme screenshot for CSS](./images/css.webp)
+![Karma Light theme screenshot for React](./images/v3/react-light.webp)
 
 ### Elixir
 
-![Karma theme screenshot for Elixir](./images/elixir.webp)
+![Karma theme screenshot for Elixir](./images/v3/elixir.webp)
 
-### Python
+![Karma Light theme screenshot for Elixir](./images/v3/elixir-light.webp)
 
-![Karma theme screenshot for Python](./images/python.webp)
+### More examples
+
+<details>
+<summary>CSS</summary>
+![Karma theme screenshot for CSS](./images/v3/css.webp)
+![Karma Light theme screenshot for CSS](./images/v3/css-light.webp)
+</details>
 
 ## Install
 
