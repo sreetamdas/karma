@@ -1,25 +1,32 @@
-<script context="module" lang="ts">
-	// @ts-nocheck
-	import HeartIcon from "$lib/HeartIcon.svelte";
-	import dayjs from "dayjs";
-	const startDate = dayjs("2018-11-08");
-	const todayDate = dayjs("2022-09-06");
+<script>
+	import Comment from "./Comment.svelte";
+	/** @type {import('./$types').PageData} */
+	export let data;
 </script>
 
 <svelte:head>
-	<title>42</title>
+	<title>{data.title} | Svelte Hacker News</title>
 </svelte:head>
 
-<div class="content">
-	<h1 class="highlight">{todayDate.diff(startDate, "months")} months.</h1>
-	<p>42. The answer to life, the universe, and everything. <HeartIcon /></p>
+<div>
+	<article class="item">
+		<a href={data.url}>
+			<h1>{data.title}</h1>
+			{#if data.domain}<small>{data.domain}</small>{/if}
+		</a>
+		{#if data.content}
+			{@html data.content}
+		{/if}
+	</article>
+	<div class="comments">
+		{#each data.comments as comment}
+			<Comment {comment} />
+		{/each}
+	</div>
 </div>
 
 <style>
-	p {
-		line-height: 1;
-	}
-	.highlight {
-		font-size: 2rem;
+	:global(html.dark) .item {
+		border-bottom: 1em solid rgba(255, 255, 255, 0.1);
 	}
 </style>
