@@ -109,7 +109,7 @@ Alternatively:
 - Go to the "Extensions" view, via `Preferences > Extensions`.
 - Search for _Karma_.
 
-- if you want the "legacy" _Karma_ theme, it's available as _Karma Legacy_ 🙂
+If you want the "legacy" _Karma_ theme, it's available as _Karma Legacy_ 🙂
 
 <br />
 <br />
