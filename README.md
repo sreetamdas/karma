@@ -102,14 +102,14 @@ A colorful mix of [Ayu](https://marketplace.visualstudio.com/items?itemName=teab
 ### From within VS Code
 
 - Go to `Preferences > Color Theme`.
-- Search for "Karma" or "Karma Light".
+- Search for _Karma_ or _Karma Light_.
 
 Alternatively:
 
 - Go to the "Extensions" view, via `Preferences > Extensions`.
-- Search for "Karma".
+- Search for _Karma_.
 
-- if you want the "legacy" Karma theme, it's available as "Karma Legacy" 🙂
+- if you want the "legacy" _Karma_ theme, it's available as _Karma Legacy_ 🙂
 
 <br />
 <br />
@@ -172,7 +172,7 @@ To override this theme in your personal config file, please follow the guide in 
 
 #### Terminal colors look weird!
 
-This is because the [integrated terminal in VS Code has a minimum contrast ratio which dynamically changes the foreground color](https://code.visualstudio.com/updates/v1_66#_minimum-contrast-ratio-default-changed). This causes some foreground colors in "Karma Light" to be shown differently. You can add the following to your `settings.json` to override this:
+This is because the [integrated terminal in VS Code has a minimum contrast ratio which dynamically changes the foreground color](https://code.visualstudio.com/updates/v1_66#_minimum-contrast-ratio-default-changed). This causes some foreground colors in _Karma Light_ to be shown differently. You can add the following to your `settings.json` to override this:
 
 ```json
 	"terminal.integrated.minimumContrastRatio": 1
@@ -180,7 +180,7 @@ This is because the [integrated terminal in VS Code has a minimum contrast ratio
 
 ## Development
 
-Wanna try out customizing and contributing to Karma? Thanks! Here's how:
+Wanna try out customizing and contributing to _Karma_? Thanks! Here's how:
 
 - Fork and clone this repository
 - This project uses [pnpm](https://pnpm.io/)—make sure you've [installed and set it up](https://pnpm.io/installation) correctly!
@@ -194,7 +194,7 @@ Wanna try out customizing and contributing to Karma? Thanks! Here's how:
   ```
 - Open this project in VS Code, and then go to `Run > Start Bebugging` or simply hit `F5`.
 
-This opens up another instance of VS Code, with the "dev" version of Karma! You can edit the color tokens in `src/tokens.ts` or change individual theme color variables in `src/generateTheme.ts`. Please make sure to use the [VS Code Theme Color reference](https://code.visualstudio.com/api/references/theme-color)!
+This opens up another instance of VS Code, with the "dev" version of _Karma_! You can edit the color tokens in `src/tokens.ts` or change individual theme color variables in `src/generateTheme.ts`. Please make sure to use the [VS Code Theme Color reference](https://code.visualstudio.com/api/references/theme-color)!
 
 ## Credits
 
@@ -202,4 +202,4 @@ _Karma_ is inspired by a mix of [Ayu](https://marketplace.visualstudio.com/items
 
 The font used in all screenshots is [Iosevka](https://typeof.net/Iosevka/). If you're interested in knowing more about my setup/what I use, head on over to [sreetamdas.com/uses](https://sreetamdas.com/uses)!
 
-If you like Karma, thanks a lot! It truly means a lot to me. A 🌟star on the repository would be super cool! :)
+If you like _Karma_, thanks a lot! It truly means a lot to me. A 🌟star on the repository would be super cool! :)
