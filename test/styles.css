@@ -1,0 +1,25 @@
+@font-face {
+	font-family: "Magilio";
+	src: url("/Magilio-Regular.otf") format("opentype");
+}
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen";
+	-webkit-font-smoothing: antialiased;
+	/* Base font size for readability */
+	font-size: 48px;
+}
+@media (max-width: 400px) {
+	body {
+		font-size: 24px;
+	}
+}
+
+pre {
+	font-family: var(--font-mono);
+	box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
+}
+
+:not(pre):not(span)::selection {
+	background: var(--text-color);
+	color: var(--pure-white);
+}

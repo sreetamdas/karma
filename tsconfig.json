@@ -1,0 +1,25 @@
+{
+	"compilerOptions": {
+		"target": "ESNext",
+		"useDefineForClassFields": true,
+		"module": "ESNext",
+		"lib": ["ESNext", "DOM"],
+		"moduleResolution": "Node",
+		"strict": true,
+		"sourceMap": true,
+		"resolveJsonModule": true,
+		"incremental": true,
+		"isolatedModules": true,
+		"esModuleInterop": true,
+		"noEmit": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noImplicitAny": true,
+		"noImplicitReturns": true,
+		"skipLibCheck": true,
+		// "outDir": "dist",
+		"tsBuildInfoFile": "./tsconfig.tsbuildinfo"
+	},
+	"exclude": ["node_modules", "bin", "dist"],
+	"include": ["src"]
+}
