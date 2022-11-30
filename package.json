@@ -14,7 +14,7 @@
 	"scripts": {
 		"start": "tsx watch src/index.ts",
 		"dev": "pnpm run start",
-		"build": "rimraf ./dist && tsup",
+		"build": "rimraf ./dist && tsx src/index.ts",
 		"prepublishOnly": "npm run build",
 		"package": "vsce package",
 		"release": "vsce publish"
