@@ -1,5 +1,5 @@
 {
-	"name": "@sreetamdas/karma",
+	"name": "karma",
 	"displayName": "Karma",
 	"description": "A colorful VS Code theme",
 	"version": "3.1.0",
@@ -49,9 +49,9 @@
 	},
 	"devDependencies": {
 		"@types/node": "^18.16.1",
+		"@vscode/vsce": "^2.19.0",
 		"tsx": "^3.12.6",
-		"typescript": "^5.0.4",
-		"vsce": "^2.15.0"
+		"typescript": "^5.0.4"
 	},
 	"bugs": {
 		"url": "https://github.com/sreetamdas/karma/issues"
