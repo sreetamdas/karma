@@ -339,8 +339,14 @@ export function generateTheme(variant: KarmaVariant = "default") {
 
 			"editorIndentGuide.background": faint,
 			"editorWhitespace.foreground": gray[4],
-			"editorInlayHint.background": background,
-			"editorInlayHint.foreground": primary,
+			"editorInlayHint.background": tokenThemeMap(
+				{ default: gray[1], light: gray[18] },
+				variant,
+			),
+			"editorInlayHint.foreground": tokenThemeMap(
+				{ default: orange, light: purple },
+				variant,
+			),
 
 			"editorBracketHighlight.foreground1": yellow,
 			"editorBracketHighlight.foreground2": red,
