@@ -1,5 +1,5 @@
 {
-	"name": "karma",
+	"name": "@sreetamdas/karma",
 	"displayName": "Karma",
 	"description": "A colorful VS Code theme",
 	"version": "3.1.0",
@@ -15,7 +15,7 @@
 	"scripts": {
 		"start": "tsx watch src/index.ts",
 		"dev": "pnpm run start",
-		"build": "rimraf ./dist && tsx src/index.ts & tsup src/index.ts",
+		"build": "rimraf ./dist && tsx src/build.ts & tsup src/index.ts",
 		"prepublishOnly": "npm run build",
 		"package": "vsce package",
 		"release": "vsce publish"
