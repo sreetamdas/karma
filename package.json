@@ -11,10 +11,11 @@
 		"theme": "dark"
 	},
 	"icon": "images/logo.png",
+	"main": "./dist/index.js",
 	"scripts": {
 		"start": "tsx watch src/index.ts",
 		"dev": "pnpm run start",
-		"build": "rimraf ./dist && tsx src/index.ts",
+		"build": "rimraf ./dist && tsx src/index.ts & tsup src/index.ts",
 		"prepublishOnly": "npm run build",
 		"package": "vsce package",
 		"release": "vsce publish"
@@ -50,6 +51,7 @@
 	"devDependencies": {
 		"@types/node": "^18.16.1",
 		"@vscode/vsce": "^2.19.0",
+		"tsup": "^7.1.0",
 		"tsx": "^3.12.6",
 		"typescript": "^5.0.4"
 	},

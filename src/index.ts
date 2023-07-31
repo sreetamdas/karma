@@ -20,3 +20,5 @@ fs.mkdir(DIR, { recursive: true })
 		console.log("Theme generated");
 	})
 	.catch(() => process.exit(1));
+
+export { defaultTheme, lightTheme };
