@@ -17,7 +17,6 @@
 		"noImplicitAny": true,
 		"noImplicitReturns": true,
 		"skipLibCheck": true,
-		// "outDir": "dist",
 		"tsBuildInfoFile": "./tsconfig.tsbuildinfo"
 	},
 	"exclude": ["node_modules", "bin", "dist"],

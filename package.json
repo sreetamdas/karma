@@ -11,11 +11,12 @@
 		"theme": "dark"
 	},
 	"icon": "images/logo.png",
-	"main": "./dist/index.js",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
 	"scripts": {
 		"start": "tsx watch src/index.ts",
 		"dev": "pnpm run start",
-		"build": "rimraf ./dist && tsx src/build.ts & tsup src/index.ts",
+		"build": "rimraf ./dist && tsx src/build.ts & tsup src/index.ts --dts",
 		"prepublishOnly": "npm run build",
 		"package": "vsce package",
 		"release": "vsce publish"
