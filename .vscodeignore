@@ -13,3 +13,4 @@ CHANGELOG.md
 tsconfig.json
 images/
 !images/logo.png
+dist/
