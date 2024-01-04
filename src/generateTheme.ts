@@ -427,7 +427,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			 * Peek view
 			 */
 			// Color of the peek view borders and arrow.
-			"peekView.border": faint,
+			"peekView.border": highlight2,
 			// Background color of the peek view editor.
 			"peekViewEditor.background": background,
 			// Background color of the gutter in the peek view editor.
@@ -504,7 +504,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"mergeEditor.conflict.unHandled.minimapOverViewRuler": red,
 
 			"panel.background": background,
-			"panel.border": background,
+			"panel.border": gray[1],
 			"panel.dropBorder": tokenThemeMap(
 				{ default: yellow, light: highlight },
 				variant,
