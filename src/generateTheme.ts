@@ -504,7 +504,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"mergeEditor.conflict.unHandled.minimapOverViewRuler": red,
 
 			"panel.background": background,
-			"panel.border": gray[1],
+			"panel.border": background,
 			"panel.dropBorder": tokenThemeMap(
 				{ default: yellow, light: highlight },
 				variant,
