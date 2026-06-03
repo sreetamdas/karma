@@ -1,0 +1,7 @@
+id = "karma-theme"
+name = "Karma Theme"
+version = "0.0.1"
+schema_version = 1
+authors = ["Sreetam Das"]
+description = "A colorful dark theme"
+repository = "https://github.com/sreetamdas/karma"
