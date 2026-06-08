@@ -1,6 +1,6 @@
 id = "karma-theme"
 name = "Karma Theme"
-version = "0.0.1"
+version = "1.0.0"
 schema_version = 1
 authors = ["Sreetam Das"]
 description = "A colorful dark theme"
