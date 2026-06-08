@@ -106,7 +106,7 @@
     "activityBar.activeFocusBorder": "#A86EFD",
     "sideBar.foreground": "#525053",
     "sideBar.background": "#FFFFFF",
-    "sideBar.border": "#FFFFFF",
+    "sideBar.border": "#EEEEEE",
     "sideBarTitle.foreground": "#88898F",
     "sideBarSectionHeader.foreground": "#999999",
     "sideBarSectionHeader.background": "#FFFFFF",
@@ -617,19 +617,24 @@
         "entity.other.attribute-name.parent-selector-suffix.css punctuation.definition.entity.css"
       ],
       "settings": {
+        "fontStyle": "",
         "foreground": "#2D972F"
       }
     },
     {
       "scope": "entity.other.attribute-name.id.css",
       "settings": {
+        "fontStyle": "",
         "foreground": "#FA8D3E"
       }
     },
     {
-      "scope": "entity.other.attribute-name.pseudo-class.cssentity.other.pseudo-class.css",
+      "scope": [
+        "entity.other.attribute-name.pseudo-class.css",
+        "entity.other.pseudo-class.css"
+      ],
       "settings": {
-        "fontStyle": "italic",
+        "fontStyle": "",
         "foreground": "#5688C7"
       }
     },
@@ -1064,7 +1069,7 @@
         "source.less variable.declaration.less"
       ],
       "settings": {
-        "fontStyle": "italic",
+        "fontStyle": "",
         "foreground": "#FA8D3E"
       }
     },
@@ -1263,6 +1268,7 @@
     {
       "scope": "support.type.property-name",
       "settings": {
+        "fontStyle": "",
         "foreground": "#444444"
       }
     },

@@ -243,7 +243,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 
 			"sideBar.foreground": gray[7],
 			"sideBar.background": background,
-			"sideBar.border": background,
+			"sideBar.border": faint,
 			"sideBarTitle.foreground": gray[4],
 			"sideBarSectionHeader.foreground": gray[6],
 			"sideBarSectionHeader.background": background,
@@ -427,7 +427,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			 * Peek view
 			 */
 			// Color of the peek view borders and arrow.
-			"peekView.border": highlight2,
+			"peekView.border": faint,
 			// Background color of the peek view editor.
 			"peekViewEditor.background": background,
 			// Background color of the gutter in the peek view editor.
@@ -862,16 +862,18 @@ export function generateTheme(variant: KarmaVariant = "default") {
 					"entity.other.attribute-name.parent-selector-suffix.css",
 					"entity.other.attribute-name.parent-selector-suffix.css punctuation.definition.entity.css",
 				],
-				settings: { foreground: green },
+				settings: { fontStyle: "", foreground: green },
 			},
 			{
 				scope: "entity.other.attribute-name.id.css",
-				settings: { foreground: orange },
+				settings: { fontStyle: "", foreground: orange },
 			},
 			{
-				scope:
-					"entity.other.attribute-name.pseudo-class.cssentity.other.pseudo-class.css",
-				settings: { fontStyle: "italic", foreground: blue },
+				scope: [
+					"entity.other.attribute-name.pseudo-class.css",
+					"entity.other.pseudo-class.css",
+				],
+				settings: { fontStyle: "", foreground: blue },
 			},
 			{
 				scope: ["entity.name.function", "support.function"],
@@ -1143,7 +1145,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 					"source.less variable.other.less",
 					"source.less variable.declaration.less",
 				],
-				settings: { fontStyle: "italic", foreground: orange },
+				settings: { fontStyle: "", foreground: orange },
 			},
 			{
 				scope: "source.git-show.commit.sha",
@@ -1261,7 +1263,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			},
 			{
 				scope: "support.type.property-name",
-				settings: { foreground: gray[10] },
+				settings: { fontStyle: "", foreground: gray[10] },
 			},
 			{ scope: "support.class", settings: { foreground: blue } },
 			{ scope: "text", settings: { foreground: gray[10] } },
