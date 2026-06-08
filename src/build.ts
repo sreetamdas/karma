@@ -4,7 +4,9 @@ import { generateTheme } from "./generateTheme";
 const DIR = "./themes";
 
 const defaultTheme = generateTheme();
+const defaultNoItalicsTheme = generateTheme("default-no-italics");
 const lightTheme = generateTheme("light");
+const lightNoItalicsTheme = generateTheme("light-no-italics");
 
 fs.mkdir(DIR, { recursive: true })
 	.then(() =>
@@ -13,7 +15,15 @@ fs.mkdir(DIR, { recursive: true })
 				`${DIR}/default.json`,
 				JSON.stringify(defaultTheme, null, 2),
 			),
+			fs.writeFile(
+				`${DIR}/default-no-italics.json`,
+				JSON.stringify(defaultNoItalicsTheme, null, 2),
+			),
 			fs.writeFile(`${DIR}/light.json`, JSON.stringify(lightTheme, null, 2)),
+			fs.writeFile(
+				`${DIR}/light-no-italics.json`,
+				JSON.stringify(lightNoItalicsTheme, null, 2),
+			),
 		]),
 	)
 	.then(() => {
