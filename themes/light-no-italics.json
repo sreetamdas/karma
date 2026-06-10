@@ -1,5 +1,5 @@
 {
-  "name": "Karma",
+  "name": "Karma Light (No Italics)",
   "type": "light",
   "author": "Sreetam Das <sreetamdas@gmail.com>",
   "semanticHighlighting": true,
@@ -10,11 +10,11 @@
     "variable": "#6F42C1",
     "interface": {
       "foreground": "#2D972F",
-      "italic": true
+      "italic": false
     },
     "type": {
       "foreground": "#2D972F",
-      "italic": true
+      "italic": false
     },
     "property": {
       "foreground": "#444444"
@@ -430,7 +430,7 @@
         "comment text"
       ],
       "settings": {
-        "fontStyle": "italic",
+        "fontStyle": "",
         "foreground": "#999999"
       }
     },
@@ -584,7 +584,7 @@
     {
       "scope": "entity.other.inherited-class",
       "settings": {
-        "fontStyle": "italic",
+        "fontStyle": "",
         "foreground": "#5688C7"
       }
     },
@@ -606,7 +606,7 @@
     {
       "scope": "entity.other.attribute-name",
       "settings": {
-        "fontStyle": "italic",
+        "fontStyle": "",
         "foreground": "#5688C7"
       }
     },
@@ -656,7 +656,7 @@
     {
       "scope": "invalid",
       "settings": {
-        "fontStyle": "italic"
+        "fontStyle": ""
       }
     },
     {
@@ -702,7 +702,7 @@
     {
       "scope": "markup.italic",
       "settings": {
-        "fontStyle": "italic"
+        "fontStyle": ""
       }
     },
     {
@@ -780,7 +780,7 @@
     {
       "scope": "markup.quote",
       "settings": {
-        "fontStyle": "italic"
+        "fontStyle": ""
       }
     },
     {
@@ -1124,7 +1124,7 @@
     {
       "scope": "storage.type",
       "settings": {
-        "fontStyle": "italic",
+        "fontStyle": "",
         "foreground": "#5688C7"
       }
     },
@@ -1143,7 +1143,7 @@
     {
       "scope": "storage.modifier",
       "settings": {
-        "fontStyle": "italic",
+        "fontStyle": "",
         "foreground": "#FC618D"
       }
     },
@@ -1255,7 +1255,7 @@
         "entity.name.type.object.console"
       ],
       "settings": {
-        "fontStyle": "italic",
+        "fontStyle": "",
         "foreground": "#5688C7"
       }
     },
@@ -1303,7 +1303,7 @@
         "parameters variable.function"
       ],
       "settings": {
-        "fontStyle": "italic",
+        "fontStyle": "",
         "foreground": "#FA8D3E"
       }
     },
@@ -1313,7 +1313,7 @@
         "variable.parameter.function.language.special.self.python"
       ],
       "settings": {
-        "fontStyle": "italic",
+        "fontStyle": "",
         "foreground": "#B29ADE"
       }
     },

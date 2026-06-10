@@ -617,19 +617,24 @@
         "entity.other.attribute-name.parent-selector-suffix.css punctuation.definition.entity.css"
       ],
       "settings": {
+        "fontStyle": "",
         "foreground": "#7BD88F"
       }
     },
     {
       "scope": "entity.other.attribute-name.id.css",
       "settings": {
+        "fontStyle": "",
         "foreground": "#FD9353"
       }
     },
     {
-      "scope": "entity.other.attribute-name.pseudo-class.cssentity.other.pseudo-class.css",
+      "scope": [
+        "entity.other.attribute-name.pseudo-class.css",
+        "entity.other.pseudo-class.css"
+      ],
       "settings": {
-        "fontStyle": "italic",
+        "fontStyle": "",
         "foreground": "#5AD4E6"
       }
     },
@@ -1064,7 +1069,7 @@
         "source.less variable.declaration.less"
       ],
       "settings": {
-        "fontStyle": "italic",
+        "fontStyle": "",
         "foreground": "#FD9353"
       }
     },
@@ -1263,6 +1268,7 @@
     {
       "scope": "support.type.property-name",
       "settings": {
+        "fontStyle": "",
         "foreground": "#D7D7D7"
       }
     },

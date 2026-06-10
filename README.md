@@ -114,6 +114,13 @@ If you want the "legacy" _Karma_ theme, it's available as _Karma Legacy_ 🙂
 <br />
 <br />
 
+## Community ports
+
+- [Karma for iTerm2](https://github.com/aspatari/iterm2-karma)
+
+<br />
+<br />
+
 ## Recommended setup
 
 For the best, recommended experience use the following:
@@ -135,7 +142,7 @@ For the best, recommended experience use the following:
   	"git.mergeEditor": false,
   	"terminal.integrated.fontFamily": "'Iosevka Term'",
   	"terminal.integrated.fontSize": 13,
-  	"workbench.activityBar.visible": false, // hide activity bar
+  	"workbench.activityBar.location": "hidden", // hide activity bar
   	"workbench.colorCustomizations": {
   		"[Karma]": {
   			"editorLineNumber.foreground": "#333333"

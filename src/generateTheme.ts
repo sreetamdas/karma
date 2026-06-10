@@ -6,17 +6,32 @@
 import { opacity, tokenThemeMap } from "./helpers";
 import { KARMA, KARMA_LIGHT } from "./tokens";
 
-export type KarmaVariant = "default" | "light";
+export type KarmaBaseVariant = "default" | "light";
+export type KarmaVariant = KarmaBaseVariant | "default-no-italics" | "light-no-italics";
+
+function getBaseVariant(variant: KarmaVariant): KarmaBaseVariant {
+	return variant === "light" || variant === "light-no-italics" ? "light" : "default";
+}
+
+function removeItalicFontStyle(fontStyle: string): string {
+	return fontStyle
+		.split(/\s+/)
+		.filter((part) => part && part !== "italic")
+		.join(" ");
+}
+
 export function generateTheme(variant: KarmaVariant = "default") {
+	const baseVariant = getBaseVariant(variant);
+	const noItalics = variant === "default-no-italics" || variant === "light-no-italics";
 	let theme: typeof KARMA | typeof KARMA_LIGHT = KARMA;
 
-	if (variant === "default") {
+	if (baseVariant === "default") {
 		theme = KARMA;
-	} else if (variant === "light") {
+	} else if (baseVariant === "light") {
 		theme = KARMA_LIGHT;
 	}
 
-	const type = variant === "default" ? "dark" : "light";
+	const type = baseVariant === "default" ? "dark" : "light";
 
 	const {
 		background,
@@ -37,7 +52,11 @@ export function generateTheme(variant: KarmaVariant = "default") {
 	} = theme;
 
 	const themeConfig = {
-		name: "Karma",
+		name: noItalics
+			? baseVariant === "default"
+				? "Karma (No Italics)"
+				: "Karma Light (No Italics)"
+			: "Karma",
 		type,
 		author: "Sreetam Das <sreetamdas@gmail.com>",
 		semanticHighlighting: true,
@@ -48,11 +67,11 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			variable: purple,
 			interface: {
 				foreground: green,
-				italic: true,
+				italic: !noItalics,
 			},
 			type: {
 				foreground: green,
-				italic: true,
+				italic: !noItalics,
 			},
 			property: { foreground: gray[10] },
 		},
@@ -64,7 +83,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 
 			"textLink.foreground": tokenThemeMap(
 				{ default: yellow, light: highlight },
-				variant,
+				baseVariant,
 			),
 			"textLink.activeForeground": primary,
 			"textBlockQuote.background": background,
@@ -102,14 +121,14 @@ export function generateTheme(variant: KarmaVariant = "default") {
 					default: gray[4],
 					light: opacity(purple, 48),
 				},
-				variant,
+				baseVariant,
 			),
 			"inputOption.activeBorder": tokenThemeMap(
 				{
 					default: gray[4],
 					light: opacity(purple, 48),
 				},
-				variant,
+				baseVariant,
 			),
 			"inputValidation.errorBackground": background,
 			"inputValidation.errorBorder": red,
@@ -124,24 +143,24 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"scrollbar.shadow": background,
 			"scrollbarSlider.background": tokenThemeMap(
 				{ default: gray[15], light: opacity(gray[12], 48) },
-				variant,
+				baseVariant,
 			),
 			"scrollbarSlider.hoverBackground": tokenThemeMap(
 				{ default: gray[17], light: opacity(gray[12], 80) },
-				variant,
+				baseVariant,
 			),
 			"scrollbarSlider.activeBackground": tokenThemeMap(
 				{ default: gray[18], light: opacity(gray[12], 112) },
-				variant,
+				baseVariant,
 			),
 
 			"badge.foreground": tokenThemeMap(
 				{ default: background, light: background },
-				variant,
+				baseVariant,
 			),
 			"badge.background": tokenThemeMap(
 				{ default: yellow, light: highlight },
-				variant,
+				baseVariant,
 			),
 
 			"progressBar.background": highlight2,
@@ -151,7 +170,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			// List/Tree foreground color for the selected item when the list/tree is active.
 			"list.activeSelectionForeground": tokenThemeMap(
 				{ default: yellow, light: purple },
-				variant,
+				baseVariant,
 			),
 			// List/Tree icon foreground color for the selected item when the list/tree is active. An active list/tree has keyboard focus, an inactive does not.
 			"list.activeSelectionIconForeground": primary,
@@ -181,7 +200,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 					default: yellow,
 					light: purple,
 				},
-				variant,
+				baseVariant,
 			),
 			// List/Tree icon foreground color for the selected item when the list/tree is inactive. An active list/tree has keyboard focus, an inactive does not.
 			"list.inactiveSelectionIconForeground": gray[7],
@@ -210,7 +229,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			// Drag and drop feedback color for the activity bar items. The activity bar is showing on the far left or right and allows to switch between views of the side bar.
 			"activityBar.dropBorder": tokenThemeMap(
 				{ default: yellow, light: highlight },
-				variant,
+				baseVariant,
 			),
 			// Activity Bar foreground color (for example used for the icons).
 			"activityBar.foreground": gray[9],
@@ -221,24 +240,24 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			// Activity notification badge background color.
 			"activityBarBadge.background": tokenThemeMap(
 				{ default: yellow, light: highlight },
-				variant,
+				baseVariant,
 			),
 			// Activity notification badge foreground color.
 			"activityBarBadge.foreground": tokenThemeMap(
 				{ default: background, light: background },
-				variant,
+				baseVariant,
 			),
 			// Activity Bar active indicator border color.
 			"activityBar.activeBorder": tokenThemeMap(
 				{ default: yellow, light: highlight },
-				variant,
+				baseVariant,
 			),
 			// Activity Bar optional background color for the active element.
 			"activityBar.activeBackground": background,
 			// Activity bar focus border color for the active item.
 			"activityBar.activeFocusBorder": tokenThemeMap(
 				{ default: yellow, light: highlight },
-				variant,
+				baseVariant,
 			),
 
 			"sideBar.foreground": gray[7],
@@ -251,15 +270,15 @@ export function generateTheme(variant: KarmaVariant = "default") {
 
 			"minimapSlider.background": tokenThemeMap(
 				{ default: gray[15], light: opacity(gray[12], 48) },
-				variant,
+				baseVariant,
 			),
 			"minimapSlider.hoverBackground": tokenThemeMap(
 				{ default: gray[17], light: opacity(gray[12], 80) },
-				variant,
+				baseVariant,
 			),
 			"minimapSlider.activeBackground": tokenThemeMap(
 				{ default: gray[18], light: opacity(gray[12], 112) },
-				variant,
+				baseVariant,
 			),
 
 			"editorGroup.border": background,
@@ -272,15 +291,15 @@ export function generateTheme(variant: KarmaVariant = "default") {
 
 			"tab.activeBorder": tokenThemeMap(
 				{ default: yellow, light: highlight },
-				variant,
+				baseVariant,
 			),
 			"tab.activeBackground": tokenThemeMap(
 				{ default: background, light: background },
-				variant,
+				baseVariant,
 			),
 			"tab.activeForeground": tokenThemeMap(
 				{ default: yellow, light: highlight },
-				variant,
+				baseVariant,
 			),
 			"tab.activeModifiedBorder": gray[4],
 			"tab.border": background,
@@ -306,7 +325,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"editorCursor.background": background,
 			"editorCursor.foreground": tokenThemeMap(
 				{ default: primary, light: highlight },
-				variant,
+				baseVariant,
 			),
 
 			"editor.findMatchBackground": gray[18],
@@ -341,11 +360,11 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"editorWhitespace.foreground": gray[4],
 			"editorInlayHint.background": tokenThemeMap(
 				{ default: gray[1], light: gray[18] },
-				variant,
+				baseVariant,
 			),
 			"editorInlayHint.foreground": tokenThemeMap(
 				{ default: orange, light: purple },
-				variant,
+				baseVariant,
 			),
 
 			"editorBracketHighlight.foreground1": yellow,
@@ -384,15 +403,15 @@ export function generateTheme(variant: KarmaVariant = "default") {
 
 			"editor.snippetTabstopHighlightBackground": tokenThemeMap(
 				{ default: gray[16], light: gray[18] },
-				variant,
+				baseVariant,
 			),
 			"editor.snippetTabstopHighlightBorder": tokenThemeMap(
 				{ default: gray[6], light: gray[2] },
-				variant,
+				baseVariant,
 			),
 			"editor.snippetFinalTabstopHighlightBackground": tokenThemeMap(
 				{ default: gray[16], light: gray[18] },
-				variant,
+				baseVariant,
 			),
 			"editor.snippetFinalTabstopHighlightBorder": opacity(purple, 32),
 
@@ -413,7 +432,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 					default: gray[16],
 					light: gray[15],
 				},
-				variant,
+				baseVariant,
 			),
 			"editorHoverWidget.background": background,
 			"editorHoverWidget.border": faint,
@@ -427,7 +446,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			 * Peek view
 			 */
 			// Color of the peek view borders and arrow.
-			"peekView.border": highlight2,
+			"peekView.border": faint,
 			// Background color of the peek view editor.
 			"peekViewEditor.background": background,
 			// Background color of the gutter in the peek view editor.
@@ -438,7 +457,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 					default: gray[4],
 					light: opacity(green, 32),
 				},
-				variant,
+				baseVariant,
 			),
 			// Match highlight border color in the peek view editor.
 			// "peekViewEditor.matchHighlightBorder": background,
@@ -454,7 +473,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 					default: gray[4],
 					light: opacity(green, 32),
 				},
-				variant,
+				baseVariant,
 			),
 			// Background color of the selected entry in the peek view result list.
 			"peekViewResult.selectionBackground": background,
@@ -464,7 +483,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 					default: yellow,
 					light: purple,
 				},
-				variant,
+				baseVariant,
 			),
 			// Background color of the peek view title area.
 			"peekViewTitle.background": background,
@@ -488,7 +507,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 					default: gray[18],
 					light: opacity(green, 48),
 				},
-				variant,
+				baseVariant,
 			),
 			//The border color of unhandled unfocused conflicts.
 			"mergeEditor.conflict.unhandledUnfocused.border": opacity(orange, 128),
@@ -507,7 +526,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"panel.border": background,
 			"panel.dropBorder": tokenThemeMap(
 				{ default: yellow, light: highlight },
-				variant,
+				baseVariant,
 			),
 			"panelInput.border": background,
 			"panelSection.border": background,
@@ -516,11 +535,11 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"panelSectionHeader.foreground": gray[7],
 			"panelTitle.activeBorder": tokenThemeMap(
 				{ default: yellow, light: highlight },
-				variant,
+				baseVariant,
 			),
 			"panelTitle.activeForeground": tokenThemeMap(
 				{ default: yellow, light: highlight },
-				variant,
+				baseVariant,
 			),
 			"panelTitle.inactiveForeground": gray[6],
 
@@ -549,7 +568,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"notificationCenterHeader.foreground": gray[7],
 			"notificationLink.foreground": tokenThemeMap(
 				{ default: yellow, light: highlight },
-				variant,
+				baseVariant,
 			),
 			"notifications.background": background,
 			"notifications.border": background,
@@ -571,7 +590,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 					default: gray[15],
 					light: opacity(faint, 100),
 				},
-				variant,
+				baseVariant,
 			),
 			// Quick picker foreground color for the focused item.
 			"quickInputList.focusForeground": tokenThemeMap(
@@ -579,7 +598,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 					default: yellow,
 					light: purple,
 				},
-				variant,
+				baseVariant,
 			),
 			// Quick picker icon foreground color for the focused item.
 			// "quickInputList.focusIconForeground": primary,
@@ -654,11 +673,11 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"debugIcon.stepBackForeground": orange,
 			"debugToolBar.background": tokenThemeMap(
 				{ default: faint, light: background },
-				variant,
+				baseVariant,
 			),
 			"debugToolBar.border": tokenThemeMap(
 				{ default: background, light: faint },
-				variant,
+				baseVariant,
 			),
 
 			"terminal.foreground": primary,
@@ -708,11 +727,11 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			"settings.dropdownListBorder": gray[7],
 			"settings.headerForeground": tokenThemeMap(
 				{ default: yellow, light: highlight },
-				variant,
+				baseVariant,
 			),
 			"settings.modifiedItemIndicator": tokenThemeMap(
 				{ default: yellow, light: highlight },
-				variant,
+				baseVariant,
 			),
 			"settings.numberInputBackground": background,
 			"settings.numberInputBorder": background,
@@ -862,16 +881,18 @@ export function generateTheme(variant: KarmaVariant = "default") {
 					"entity.other.attribute-name.parent-selector-suffix.css",
 					"entity.other.attribute-name.parent-selector-suffix.css punctuation.definition.entity.css",
 				],
-				settings: { foreground: green },
+				settings: { fontStyle: "", foreground: green },
 			},
 			{
 				scope: "entity.other.attribute-name.id.css",
-				settings: { foreground: orange },
+				settings: { fontStyle: "", foreground: orange },
 			},
 			{
-				scope:
-					"entity.other.attribute-name.pseudo-class.cssentity.other.pseudo-class.css",
-				settings: { fontStyle: "italic", foreground: blue },
+				scope: [
+					"entity.other.attribute-name.pseudo-class.css",
+					"entity.other.pseudo-class.css",
+				],
+				settings: { fontStyle: "", foreground: blue },
 			},
 			{
 				scope: ["entity.name.function", "support.function"],
@@ -1143,7 +1164,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 					"source.less variable.other.less",
 					"source.less variable.declaration.less",
 				],
-				settings: { fontStyle: "italic", foreground: orange },
+				settings: { fontStyle: "", foreground: orange },
 			},
 			{
 				scope: "source.git-show.commit.sha",
@@ -1261,7 +1282,7 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			},
 			{
 				scope: "support.type.property-name",
-				settings: { foreground: gray[10] },
+				settings: { fontStyle: "", foreground: gray[10] },
 			},
 			{ scope: "support.class", settings: { foreground: blue } },
 			{ scope: "text", settings: { foreground: gray[10] } },
@@ -1317,6 +1338,16 @@ export function generateTheme(variant: KarmaVariant = "default") {
 			},
 		],
 	};
+
+
+	if (noItalics) {
+		for (const tokenColor of themeConfig.tokenColors) {
+			const { fontStyle } = tokenColor.settings;
+			if (typeof fontStyle === "string" && fontStyle.includes("italic")) {
+				tokenColor.settings.fontStyle = removeItalicFontStyle(fontStyle);
+			}
+		}
+	}
 
 	return themeConfig;
 }
