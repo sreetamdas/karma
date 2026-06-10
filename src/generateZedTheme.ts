@@ -78,7 +78,7 @@ export function generateZedTheme(variant: KarmaVariant = "default"): ZedTheme {
 		appearance: variantAppearance(variant),
 		style: {
 			"background.appearance": "opaque",
-			accents: [accent, red, blue, orange],
+			accents: [accent, red, blue],
 
 			// App surfaces. Zed has fewer named surfaces than VS Code, so these map
 			// to the closest workbench backgrounds in the generated VS Code theme.
