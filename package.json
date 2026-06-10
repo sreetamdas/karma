@@ -38,9 +38,19 @@
 				"path": "./themes/default.json"
 			},
 			{
+				"label": "Karma (No Italics)",
+				"uiTheme": "vs-dark",
+				"path": "./themes/default-no-italics.json"
+			},
+			{
 				"label": "Karma Light",
 				"uiTheme": "vs",
 				"path": "./themes/light.json"
+			},
+			{
+				"label": "Karma Light (No Italics)",
+				"uiTheme": "vs",
+				"path": "./themes/light-no-italics.json"
 			},
 			{
 				"label": "Karma Legacy",

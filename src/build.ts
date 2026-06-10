@@ -10,6 +10,11 @@ type PackageJson = {
 	version: string;
 };
 
+const defaultTheme = generateTheme();
+const defaultNoItalicsTheme = generateTheme("default-no-italics");
+const lightTheme = generateTheme("light");
+const lightNoItalicsTheme = generateTheme("light-no-italics");
+
 async function syncZedExtensionVersion(version: string) {
 	const manifest = await fs.readFile(ZED_EXTENSION_MANIFEST, "utf8");
 	const versionPattern = /^version = ".*"$/m;
@@ -28,8 +33,6 @@ async function main() {
 	const packageJson = JSON.parse(
 		await fs.readFile("./package.json", "utf8"),
 	) as PackageJson;
-	const defaultTheme = generateTheme();
-	const lightTheme = generateTheme("light");
 	const zedThemeFamily = generateZedThemeFamily();
 
 	await Promise.all([
@@ -43,8 +46,16 @@ async function main() {
 			JSON.stringify(defaultTheme, null, 2),
 		),
 		fs.writeFile(
+			`${THEME_DIR}/default-no-italics.json`,
+			JSON.stringify(defaultNoItalicsTheme, null, 2),
+		),
+		fs.writeFile(
 			`${THEME_DIR}/light.json`,
 			JSON.stringify(lightTheme, null, 2),
+		),
+		fs.writeFile(
+			`${THEME_DIR}/light-no-italics.json`,
+			JSON.stringify(lightNoItalicsTheme, null, 2),
 		),
 		fs.writeFile(
 			`${ZED_THEME_DIR}/karma.json`,
