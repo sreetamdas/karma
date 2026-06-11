@@ -1,5 +1,5 @@
 import { opacity, tokenThemeMap } from "./helpers";
-import { generateTheme, type KarmaVariant } from "./generateTheme";
+import { generateTheme, type KarmaBaseVariant } from "./generateTheme";
 import { KARMA, KARMA_LIGHT } from "./tokens";
 
 type ThemeStyle = Record<
@@ -26,15 +26,15 @@ type ZedThemeFamily = {
 
 const schema = "https://zed.dev/schema/themes/v0.2.0.json";
 
-function tokensForVariant(variant: KarmaVariant) {
+function tokensForVariant(variant: KarmaBaseVariant) {
 	return variant === "default" ? KARMA : KARMA_LIGHT;
 }
 
-function variantName(variant: KarmaVariant) {
+function variantName(variant: KarmaBaseVariant) {
 	return variant === "default" ? "Karma" : "Karma Light";
 }
 
-function variantAppearance(variant: KarmaVariant) {
+function variantAppearance(variant: KarmaBaseVariant) {
 	return variant === "default" ? "dark" : "light";
 }
 
@@ -42,7 +42,7 @@ function colorValue(value: string | { foreground: string }) {
 	return typeof value === "string" ? value : value.foreground;
 }
 
-export function generateZedTheme(variant: KarmaVariant = "default"): ZedTheme {
+export function generateZedTheme(variant: KarmaBaseVariant = "default"): ZedTheme {
 	const vscodeTheme = generateTheme(variant);
 	const theme = tokensForVariant(variant);
 	const c = vscodeTheme.colors;
@@ -68,6 +68,13 @@ export function generateZedTheme(variant: KarmaVariant = "default"): ZedTheme {
 		{ default: gray[15], light: opacity(gray[12], 48) },
 		variant,
 	);
+	const listSelectionBackground = c["quickInputList.focusBackground"];
+	const terminalDimBlack = tokenThemeMap(
+		{ default: gray[1], light: gray[1] },
+		variant,
+	);
+	const terminalDimOpacity = variant === "default" ? 153 : 160;
+	const terminalDimColor = (color: string) => opacity(color, terminalDimOpacity);
 	const warningBackground = opacity(orange, variant === "default" ? 25 : 32);
 	const infoBackground = opacity(blue, variant === "default" ? 25 : 32);
 	const hintBackground = opacity(purple, variant === "default" ? 25 : 32);
@@ -119,7 +126,7 @@ export function generateZedTheme(variant: KarmaVariant = "default"): ZedTheme {
 			"ghost_element.background": null,
 			"ghost_element.hover": c["list.hoverBackground"],
 			"ghost_element.active": activeSubtle,
-			"ghost_element.selected": c["list.activeSelectionBackground"],
+			"ghost_element.selected": listSelectionBackground,
 			"ghost_element.disabled": null,
 			"drop_target.background": c["list.dropBackground"],
 
@@ -136,7 +143,7 @@ export function generateZedTheme(variant: KarmaVariant = "default"): ZedTheme {
 			"link_text.hover": c["textLink.activeForeground"],
 
 			"scrollbar.thumb.background": c["scrollbarSlider.background"],
-			"scrollbar.thumb.hover_background": c["scrollbarSlider.activeBackground"],
+			"scrollbar.thumb.hover_background": c["scrollbarSlider.hoverBackground"],
 			"scrollbar.thumb.border": c["scrollbar.shadow"],
 			"scrollbar.track.background": c["scrollbar.shadow"],
 			"scrollbar.track.border": c["scrollbar.shadow"],
@@ -163,23 +170,33 @@ export function generateZedTheme(variant: KarmaVariant = "default"): ZedTheme {
 
 			"terminal.background": c["terminal.background"],
 			"terminal.foreground": c["terminal.foreground"],
+			"terminal.bright_foreground": c["terminal.ansiBrightWhite"],
+			"terminal.dim_foreground": c["terminal.ansiBrightBlack"],
 			"terminal.ansi.background": c["terminal.background"],
 			"terminal.ansi.black": c["terminal.ansiBlack"],
 			"terminal.ansi.bright_black": c["terminal.ansiBrightBlack"],
+			"terminal.ansi.dim_black": terminalDimBlack,
 			"terminal.ansi.red": c["terminal.ansiRed"],
 			"terminal.ansi.bright_red": c["terminal.ansiBrightRed"],
+			"terminal.ansi.dim_red": terminalDimColor(c["terminal.ansiRed"]),
 			"terminal.ansi.green": c["terminal.ansiGreen"],
 			"terminal.ansi.bright_green": c["terminal.ansiBrightGreen"],
+			"terminal.ansi.dim_green": terminalDimColor(c["terminal.ansiGreen"]),
 			"terminal.ansi.yellow": c["terminal.ansiYellow"],
 			"terminal.ansi.bright_yellow": c["terminal.ansiBrightYellow"],
+			"terminal.ansi.dim_yellow": terminalDimColor(c["terminal.ansiYellow"]),
 			"terminal.ansi.blue": c["terminal.ansiBlue"],
 			"terminal.ansi.bright_blue": c["terminal.ansiBrightBlue"],
+			"terminal.ansi.dim_blue": terminalDimColor(c["terminal.ansiBlue"]),
 			"terminal.ansi.magenta": c["terminal.ansiMagenta"],
 			"terminal.ansi.bright_magenta": c["terminal.ansiBrightMagenta"],
+			"terminal.ansi.dim_magenta": terminalDimColor(c["terminal.ansiMagenta"]),
 			"terminal.ansi.cyan": c["terminal.ansiCyan"],
 			"terminal.ansi.bright_cyan": c["terminal.ansiBrightCyan"],
+			"terminal.ansi.dim_cyan": terminalDimColor(c["terminal.ansiCyan"]),
 			"terminal.ansi.white": c["terminal.ansiWhite"],
 			"terminal.ansi.bright_white": c["terminal.ansiBrightWhite"],
+			"terminal.ansi.dim_white": terminalDimColor(c["terminal.ansiWhite"]),
 
 			created: c["gitDecoration.addedResourceForeground"],
 			"created.background": opacity(c["gitDecoration.addedResourceForeground"], 32),
