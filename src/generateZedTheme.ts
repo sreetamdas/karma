@@ -64,6 +64,10 @@ export function generateZedTheme(variant: KarmaBaseVariant = "default"): ZedThem
 		{ default: gray[17], light: opacity(gray[12], 80) },
 		variant,
 	);
+	const hoverSubtle = tokenThemeMap(
+		{ default: gray[14], light: opacity(gray[12], 32) },
+		variant,
+	);
 	const selectedSubtle = tokenThemeMap(
 		{ default: gray[15], light: opacity(gray[12], 48) },
 		variant,
@@ -124,7 +128,7 @@ export function generateZedTheme(variant: KarmaBaseVariant = "default"): ZedThem
 			"element.selected": c["inputOption.activeBackground"],
 			"element.disabled": c["editor.background"],
 			"ghost_element.background": null,
-			"ghost_element.hover": c["list.hoverBackground"],
+			"ghost_element.hover": hoverSubtle,
 			"ghost_element.active": activeSubtle,
 			"ghost_element.selected": listSelectionBackground,
 			"ghost_element.disabled": null,
@@ -158,9 +162,9 @@ export function generateZedTheme(variant: KarmaBaseVariant = "default"): ZedThem
 			"editor.active_line_number": c["editorLineNumber.activeForeground"],
 			"editor.invisible": c["editorWhitespace.foreground"],
 			"editor.wrap_guide": c["editorIndentGuide.background"],
-			"editor.active_wrap_guide": c["editorLineNumber.activeForeground"],
+			"editor.active_wrap_guide": c["editorWhitespace.foreground"],
 			"editor.indent_guide": c["editorIndentGuide.background"],
-			"editor.indent_guide_active": c["editorLineNumber.activeForeground"],
+			"editor.indent_guide_active": c["editorWhitespace.foreground"],
 			"editor.document_highlight.read_background": c["editor.wordHighlightBackground"],
 			"editor.document_highlight.write_background":
 				c["editor.wordHighlightStrongBackground"],
@@ -198,18 +202,15 @@ export function generateZedTheme(variant: KarmaBaseVariant = "default"): ZedThem
 			"terminal.ansi.bright_white": c["terminal.ansiBrightWhite"],
 			"terminal.ansi.dim_white": terminalDimColor(c["terminal.ansiWhite"]),
 
-			created: c["gitDecoration.addedResourceForeground"],
-			"created.background": opacity(c["gitDecoration.addedResourceForeground"], 32),
-			"created.border": c["gitDecoration.addedResourceForeground"],
-			deleted: c["gitDecoration.deletedResourceForeground"],
-			"deleted.background": opacity(c["gitDecoration.deletedResourceForeground"], 25),
-			"deleted.border": c["gitDecoration.deletedResourceForeground"],
-			modified: c["gitDecoration.modifiedResourceForeground"],
-			"modified.background": opacity(
-				c["gitDecoration.modifiedResourceForeground"],
-				25,
-			),
-			"modified.border": c["gitDecoration.modifiedResourceForeground"],
+			created: c["editorGutter.addedBackground"],
+			"created.background": opacity(c["editorGutter.addedBackground"], 32),
+			"created.border": c["editorGutter.addedBackground"],
+			deleted: c["editorGutter.deletedBackground"],
+			"deleted.background": opacity(c["editorGutter.deletedBackground"], 25),
+			"deleted.border": c["editorGutter.deletedBackground"],
+			modified: c["editorGutter.modifiedBackground"],
+			"modified.background": opacity(c["editorGutter.modifiedBackground"], 25),
+			"modified.border": c["editorGutter.modifiedBackground"],
 			conflict: c["gitDecoration.conflictingResourceForeground"],
 			"conflict.background": opacity(
 				c["gitDecoration.conflictingResourceForeground"],
@@ -338,7 +339,7 @@ export function generateZedTheme(variant: KarmaBaseVariant = "default"): ZedThem
 					color: red,
 				},
 				"text.literal": {
-					color: yellowButDarker,
+					color: orange,
 				},
 				title: {
 					color: yellowButDarker,
