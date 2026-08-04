@@ -1,0 +1,250 @@
+:root {
+  --color-pageBackground: #0a0e14;
+  --color-pageBackgroundModalActive: #0d1118;
+  --color-pageBackgroundTopLeft: #0d1118;
+  --color-pageBackgroundBottomRight: #0a0e14;
+  --color-pageBackgroundLineTop: #af98e6;
+  --color-pageBackgroundLineMid: #1d2330;
+  --color-pageBackgroundLineBottom: #101521;
+  --color-pageText: #f7f1ff;
+  --color-pageTextLight: #d7d7d7;
+  --color-pageTextSubdued: #8e86a3;
+  --color-pageTextDark: #f7f1ff;
+  --color-pageTextPositive: #7bd88f;
+  --color-pageTextLink: #af98e6;
+  --color-pageTextLinkLight: #c3b5d3;
+
+  --color-cardBackground: #101521;
+  --color-cardBorder: #2a3242;
+  --color-cardShadow: #0a0e14;
+
+  --color-tableBackground: #0d1118;
+  --color-tableRowBackgroundAlternate: var(--color-tableBackground);
+  --color-tableRowBackgroundHover: #141a26;
+  --color-tableText: #f7f1ff;
+  --color-tableTextLight: #f7f1ff;
+  --color-tableTextSubdued: #8e86a3;
+  --color-tableTextSelected: #f7f1ff;
+  --color-tableTextHover: #bab6c0;
+  --color-tableTextInactive: #8e86a3;
+  --color-tableHeaderText: #bab6c0;
+  --color-tableHeaderBackground: #101521;
+  --color-tableBorder: #1d2330;
+  --color-tableBorderSelected: #af98e6;
+  --color-tableBorderHover: #c3b5d3;
+  --color-tableBorderSeparator: #1d2330;
+  --color-tableRowBackgroundHighlight: #141a26;
+  --color-tableRowBackgroundHighlightText: #f7f1ff;
+  --color-tableRowHeaderBackground: #101521;
+  --color-tableRowHeaderText: #f7f1ff;
+
+  --color-numberPositive: #7bd88f;
+  --color-numberNegative: #fc618d;
+  --color-numberNeutral: #8e86a3;
+  --color-budgetNumberNegative: #fc618d;
+  --color-budgetNumberZero: #8e86a3;
+  --color-budgetNumberNeutral: #f7f1ff;
+  --color-budgetNumberPositive: #7bd88f;
+  --color-templateNumberFunded: #7bd88f;
+  --color-templateNumberUnderFunded: #fd9353;
+  --color-toBudgetPositive: #7bd88f;
+  --color-toBudgetZero: #7bd88f;
+  --color-toBudgetNegative: #fc618d;
+
+  --color-sidebarBackground: #0d1118;
+  --color-sidebarItemBackgroundPending: #fd9353;
+  --color-sidebarItemBackgroundPositive: #7bd88f;
+  --color-sidebarItemBackgroundFailed: #fc618d;
+  --color-sidebarItemAccentSelected: #fce566;
+  --color-sidebarItemBackgroundHover: #141a26;
+  --color-sidebarItemText: #bab6c0;
+  --color-sidebarItemTextSelected: #f7f1ff;
+  --color-sidebarBudgetName: #f7f1ff;
+
+  --color-menuBackground: #0d1118;
+  --color-menuItemBackground: #0d1118;
+  --color-menuItemBackgroundHover: #2a3242;
+  --color-menuItemText: #f7f1ff;
+  --color-menuItemTextHover: #f7f1ff;
+  --color-menuItemTextSelected: #af98e6;
+  --color-menuItemTextHeader: #c3b5d3;
+  --color-menuBorder: #1d2330;
+  --color-menuBorderHover: #af98e6;
+  --color-menuKeybindingText: #c3b5d3;
+  --color-menuAutoCompleteBackground: #0a0e14;
+  --color-menuAutoCompleteBackgroundHover: #141a26;
+  --color-menuAutoCompleteText: #d7d7d7;
+  --color-menuAutoCompleteTextHeader: #c3b5d3;
+  --color-menuAutoCompleteItemText: #f7f1ff;
+
+  --color-modalBackground: #0d1118;
+  --color-modalBorder: #1d2330;
+  --color-mobileHeaderBackground: #101521;
+  --color-mobileHeaderText: #f7f1ff;
+  --color-mobileHeaderTextSubdued: #8e86a3;
+  --color-mobileHeaderTextHover: rgba(247, 241, 255, 0.15);
+  --color-mobilePageBackground: #0a0e14;
+  --color-mobileNavBackground: #0d1118;
+  --color-mobileNavItem: #bab6c0;
+  --color-mobileNavItemSelected: #af98e6;
+  --color-mobileAccountShadow: #0a0e14;
+  --color-mobileAccountText: #51c7da;
+  --color-mobileTransactionSelected: #af98e6;
+  --color-mobileViewTheme: #101521;
+  --color-mobileConfigServerViewTheme: #af98e6;
+
+  --color-markdownNormal: #8a6cc8;
+  --color-markdownDark: #af98e6;
+  --color-markdownLight: #c3b5d3;
+
+  --color-buttonMenuText: #d7d7d7;
+  --color-buttonMenuTextHover: #f7f1ff;
+  --color-buttonMenuBackground: transparent;
+  --color-buttonMenuBackgroundHover: rgba(247, 241, 255, 0.15);
+  --color-buttonMenuBorder: #8e86a3;
+  --color-buttonMenuSelectedText: #7bd88f;
+  --color-buttonMenuSelectedTextHover: #fd9353;
+  --color-buttonMenuSelectedBackground: #0d1118;
+  --color-buttonMenuSelectedBackgroundHover: #141a26;
+  --color-buttonMenuSelectedBorder: #0d1118;
+
+  --color-buttonPrimaryText: #0a0e14;
+  --color-buttonPrimaryTextHover: #0a0e14;
+  --color-buttonPrimaryBackground: #af98e6;
+  --color-buttonPrimaryBackgroundHover: #c3b5d3;
+  --color-buttonPrimaryBorder: #af98e6;
+  --color-buttonPrimaryShadow: rgba(0, 0, 0, 0.4);
+  --color-buttonPrimaryDisabledText: #8e86a3;
+  --color-buttonPrimaryDisabledBackground: #2a3242;
+  --color-buttonPrimaryDisabledBorder: #2a3242;
+
+  --color-buttonNormalText: #f7f1ff;
+  --color-buttonNormalTextHover: #f7f1ff;
+  --color-buttonNormalBackground: #101521;
+  --color-buttonNormalBackgroundHover: #141a26;
+  --color-buttonNormalBorder: #2a3242;
+  --color-buttonNormalShadow: rgba(0, 0, 0, 0.3);
+  --color-buttonNormalSelectedText: #0a0e14;
+  --color-buttonNormalSelectedBackground: #af98e6;
+  --color-buttonNormalDisabledText: #8e86a3;
+  --color-buttonNormalDisabledBackground: #0d1118;
+  --color-buttonNormalDisabledBorder: #1d2330;
+
+  --color-calendarText: #f7f1ff;
+  --color-calendarBackground: #0a0e14;
+  --color-calendarItemText: #f7f1ff;
+  --color-calendarItemBackground: #101521;
+  --color-calendarSelectedBackground: #af98e6;
+
+  --color-buttonBareText: #f7f1ff;
+  --color-buttonBareTextHover: #f7f1ff;
+  --color-buttonBareBackground: transparent;
+  --color-buttonBareBackgroundHover: rgba(247, 241, 255, 0.15);
+  --color-buttonBareBackgroundActive: rgba(247, 241, 255, 0.3);
+  --color-buttonBareDisabledText: #8e86a3;
+  --color-buttonBareDisabledBackground: transparent;
+
+  --color-noticeBackground: #173021;
+  --color-noticeBackgroundLight: #1a3a26;
+  --color-noticeBackgroundDark: #7bd88f;
+  --color-noticeText: #7bd88f;
+  --color-noticeTextLight: #a3e5b3;
+  --color-noticeTextDark: #0a0e14;
+  --color-noticeTextMenu: #7bd88f;
+  --color-noticeBorder: #2a4a35;
+
+  --color-warningBackground: #3a2a1a;
+  --color-warningText: #fd9353;
+  --color-warningTextLight: #f7b285;
+  --color-warningTextDark: #0a0e14;
+  --color-warningBorder: #fd9353;
+
+  --color-errorBackground: #3a1a26;
+  --color-errorText: #fc618d;
+  --color-errorTextDark: #0a0e14;
+  --color-errorTextDarker: #fc618d;
+  --color-errorTextMenu: #fc618d;
+  --color-errorBorder: #fc618d;
+
+  --color-upcomingBackground: #8a6cc8;
+  --color-upcomingText: #f7f1ff;
+  --color-upcomingBorder: #1d2330;
+
+  --color-formLabelText: #c3b5d3;
+  --color-formLabelBackground: #0d1118;
+  --color-formInputBackground: #0d1118;
+  --color-formInputBackgroundSelected: #141a26;
+  --color-formInputBackgroundSelection: #af98e6;
+  --color-formInputBorder: #2a3242;
+  --color-formInputTextReadOnlySelection: #0d1118;
+  --color-formInputBorderSelected: #af98e6;
+  --color-formInputText: #f7f1ff;
+  --color-formInputTextSelected: #0a0e14;
+  --color-formInputTextPlaceholder: #8e86a3;
+  --color-formInputTextPlaceholderSelected: #bab6c0;
+  --color-formInputTextSelection: #0d1118;
+  --color-formInputShadowSelected: #c3b5d3;
+  --color-formInputTextHighlight: #af98e6;
+
+  --color-checkboxText: #0a0e14;
+  --color-checkboxBackgroundSelected: #fce566;
+  --color-checkboxBorderSelected: #fce566;
+  --color-checkboxShadowSelected: #e3cf65;
+  --color-checkboxToggleBackground: #2a3242;
+  --color-checkboxToggleBackgroundSelected: #fce566;
+  --color-checkboxToggleDisabled: #1d2330;
+
+  --color-pillBackground: #101521;
+  --color-pillBackgroundLight: #0d1118;
+  --color-pillText: #bab6c0;
+  --color-pillTextHighlighted: #c3b5d3;
+  --color-pillBorder: #2a3242;
+  --color-pillBorderDark: #2a3242;
+  --color-pillBackgroundSelected: #af98e6;
+  --color-pillTextSelected: #0a0e14;
+  --color-pillBorderSelected: #af98e6;
+  --color-pillTextSubdued: #8e86a3;
+
+  --color-reportsRed: #fc618d;
+  --color-reportsBlue: #51c7da;
+  --color-reportsGreen: #7bd88f;
+  --color-reportsGray: #8e86a3;
+  --color-reportsLabel: #f7f1ff;
+  --color-reportsInnerLabel: #0d1118;
+  --color-reportsNumberPositive: #7bd88f;
+  --color-reportsNumberNegative: #fc618d;
+  --color-reportsNumberNeutral: #8e86a3;
+  --color-reportsChartFill: #7bd88f;
+
+  --color-noteTagBackground: #8a6cc8;
+  --color-noteTagBackgroundHover: #af98e6;
+  --color-noteTagDefault: #8a6cc8;
+  --color-noteTagText: #f7f1ff;
+
+  --color-budgetOtherMonth: #0a0e14;
+  --color-budgetCurrentMonth: #0d1118;
+  --color-budgetHeaderOtherMonth: #0d1118;
+  --color-budgetHeaderCurrentMonth: #101521;
+
+  --color-floatingActionBarBackground: #101521;
+  --color-floatingActionBarBorder: #101521;
+  --color-floatingActionBarText: #f7f1ff;
+
+  --color-tooltipText: #f7f1ff;
+  --color-tooltipBackground: #0d1118;
+  --color-tooltipBorder: #2a3242;
+
+  --color-calendarCellBackground: #0a0e14;
+
+  --color-overlayBackground: rgba(0, 0, 0, 0.5);
+
+  --color-chartQual1: #af98e6;
+  --color-chartQual2: #51c7da;
+  --color-chartQual3: #7bd88f;
+  --color-chartQual4: #fc618d;
+  --color-chartQual5: #fd9353;
+  --color-chartQual6: #e3cf65;
+  --color-chartQual7: #c3b5d3;
+  --color-chartQual8: #8a6cc8;
+  --color-chartQual9: #5ad4e6;
+}
