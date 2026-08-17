@@ -11,6 +11,11 @@ test/
 vsc-extension-quickstart.md
 CHANGELOG.md
 tsconfig.json
+pnpm-lock.yaml
+pnpm-workspace.yaml
+actual.css
+actual-light.css
+packages/
 images/
 !images/logo.png
 dist/
