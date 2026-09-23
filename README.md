@@ -111,6 +111,11 @@ Alternatively:
 
 If you want the "legacy" _Karma_ theme, it's available as _Karma Legacy_ 🙂
 
+### Actual Budget
+
+- **Dark**: in Actual, go to _Settings → Theme installer_ and pick _Karma_ from the catalog — the installer fetches [`actual.css`](https://raw.githubusercontent.com/sreetamdas/karma/refs/heads/main/actual.css) from `main`.
+- **Light**: the catalog only ships the dark variant. Install it through the installer's direct-URL option with `https://raw.githubusercontent.com/sreetamdas/karma/refs/heads/main/actual-light.css`.
+
 <br />
 <br />
 
