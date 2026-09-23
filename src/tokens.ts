@@ -4,12 +4,16 @@ export const KARMA = {
 	transparent: "#00000000",
 
 	blue: "#5AD4E6",
+	blueButDarker: "#3B8A96",
 	green: "#7BD88F",
+	greenButDarker: "#508C5D",
 	orange: "#FD9353",
+	orangeButDarker: "#A46036",
 	purple: "#AF98E6",
 	highlight: "#A86EFD",
 	highlight2: "#A76EFD80",
 	red: "#FC618D",
+	redButDarker: "#A43F5B",
 	yellow: "#FCE566",
 	yellowButDarker: "#E3CF65",
 	faint: "#1C2025",
@@ -19,7 +23,7 @@ export const KARMA = {
 		2: "#444444",
 		3: "#494C59",
 		4: "#525053",
-		5: "#69676C", // REMOVE
+		5: "#69676C",
 		6: "#696969",
 		7: "#88898F",
 		8: "#8B888F", // REMOVE
@@ -44,12 +48,16 @@ export const KARMA_LIGHT = {
 	transparent: "#00000000",
 
 	blue: "#5688C7",
+	blueButDarker: "#385881",
 	green: "#2D972F",
+	greenButDarker: "#1D621F",
 	orange: "#FA8D3E",
+	orangeButDarker: "#9C5522",
 	purple: "#6F42C1",
 	highlight: "#A86EFD",
 	highlight2: "#A76EFD80",
 	red: "#FC618D",
+	redButDarker: "#A43F5B",
 	yellow: "#EEAE11",
 	yellowButDarker: "#FFAA33",
 	faint: "#EEEEEE",
@@ -59,7 +67,7 @@ export const KARMA_LIGHT = {
 		2: "#D7D7D7",
 		3: "#BAB6C0",
 		4: "#88898F",
-		5: "#69676C", // REMOVE
+		5: "#69676C",
 		6: "#999999",
 		7: "#525053",
 		8: "#8B888F", // REMOVE
