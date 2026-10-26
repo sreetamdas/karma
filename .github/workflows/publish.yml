@@ -4,10 +4,19 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+    inputs:
+      dry-run:
+        description: Package the extension but do not publish it
+        type: boolean
+        default: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      # `secrets` is not available in a step-level `if`, so promote it to env.
+      OVSX_PAT: ${{ secrets.OVSX_PAT }}
     steps:
       - uses: actions/checkout@v7.0.1
       - name: Publish to Visual Studio Marketplace
@@ -15,9 +24,15 @@ jobs:
         with:
           pat: ${{ secrets.VSCE_TOKEN }}
           registryUrl: https://marketplace.visualstudio.com
+          # pnpm repo: the action's own npm install would fight the lockfile, and
+          # the vsix only carries committed theme JSON.
+          dependencies: false
+          dryRun: ${{ inputs.dry-run || false }}
       - name: Publish to Open VSX (Cursor)
-        if: ${{ secrets.OVSX_PAT != '' }}
+        if: env.OVSX_PAT != ''
         uses: HaaLeo/publish-vscode-extension@v2.1.0
         with:
-          pat: ${{ secrets.OVSX_PAT }}
+          pat: ${{ env.OVSX_PAT }}
           registryUrl: https://open-vsx.org
+          dependencies: false
+          dryRun: ${{ inputs.dry-run || false }}
