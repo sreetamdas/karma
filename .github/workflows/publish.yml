@@ -29,7 +29,10 @@ jobs:
           dependencies: false
           dryRun: ${{ inputs.dry-run || false }}
       - name: Publish to Open VSX (Cursor)
-        if: env.OVSX_PAT != ''
+        # The two registries are independent: an expired Marketplace token must
+        # not silently stop the Open VSX release too, which is what happened on
+        # the 3.1.2 run.
+        if: ${{ env.OVSX_PAT != '' && !cancelled() }}
         uses: HaaLeo/publish-vscode-extension@v2.1.0
         with:
           pat: ${{ env.OVSX_PAT }}
