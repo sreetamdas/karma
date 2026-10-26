@@ -11,6 +11,7 @@ test/
 vsc-extension-quickstart.md
 CHANGELOG.md
 tsconfig.json
+tsconfig.tsbuildinfo
 pnpm-lock.yaml
 pnpm-workspace.yaml
 actual.css
